@@ -15,48 +15,94 @@
 		}
 
 		//Métodos de consulta que devuelven arrays
-		public function InsertQuery(string $query, array $marcadores)
+		public function InsertQuery(string $tabla, array $columnas = null, array $valores, array $marcadores = null)
 		{
-			$parametros = func_get_args();
+			if ($columnas == null) {
+				try {
 
-			try {
-				if (count($parametros) == 1) {
-				
-					$cons_prep = $this->conexion->prepare(query);
-					$cons_prep->execute();
-				} elseif (count($parametros) == 2) {
+					//Convirtiendo los array a strings para que el query pueda ejecutarse
+					$values_imploded = implode("','",$valores);
+					$query = "INSERT INTO $tabla VALUES('$values_imploded')";
 
-					$cons_prep = $this->conexion->prepare(query);
-					$cons_prep->execute($parametros[1]);
-				} else {
-				
-					throw new ParamsException("Error de paso de parámetros");
-							
+					$cons_prep = $conexion->prepare($query);
+					if ($marcadores == null) {
+						
+						$cons_prep->execute();
+						$cons_prep->closeCursor();
+					} else {
+
+						$cons_prep->execute(htmlentities($marcadores,ENT_HTML5,"UTF-8"));
+						$cons_prep->closeCursor();
+					}
+
+					//Comprobando si se han afectado columnas
+					$columnasAfectadas = $cons_prep->rowCount();
+					if ($columnasAfectadas <= 0) {
+						 
+						 return 0;
+					} else {
+
+						return 1;
+					}
+				} catch (PDOException $e) {
+					
+					die("Error " . getMessage() . "en la línea " . $e->getLine());
+					exit();
 				}
-			} catch (ParamsException $e) {
-				
-				echo $e->getMessage();
+			} else {
+				try {
+
+					//Convirtiendo los array a strings para que el query pueda ejecutarse
+					$keys_imploded = implode($columnas);
+					$values_imploded = implode("','",$valores);
+
+					$query = "INSERT INTO $tabla($keys_imploded) VALUES('$values_imploded')"; //Iniciando consulta
+
+					$cons_prep = $conexion->prepare($query); //Preparando consulta
+					if ($marcadores == null) { //Executando consulta con caracteres escapados para evitar la inyección sql
+						
+						$cons_prep->execute();
+						$cons_prep->closeCursor();
+					} else {
+
+						$cons_prep->execute(htmlentities($marcadores,ENT_HTML5,"UTF-8"));
+						$cons_prep->closeCursor();
+					}
+
+					//Comprobando si se han afectado columnas
+					$columnasAfectadas = $cons_prep->rowCount();
+					if ($columnasAfectadas <= 0) {
+						 
+						 return 0;
+					} else {
+
+						return 1;
+					}
+				} catch (PDOException $e) {
+					
+					die("Error " . getMessage() . "en la línea " . $e->getLine());
+				}
 			}
 		}
 
 		public function deleteQuery(string $query)
 		{
-			# code...
+
 		}
 
-		public function updateQuery(string query)
+		public function updateQuery(string $query)
 		{
 
 		}
 
-		public function selectQuery(string query)
+		public function selectQuery(string $query)
 		{
 			# code...
 		}
 		
 		// Variables usadas para establecer conexión y las configuraciones pertinentes
 		private DB_SERVER = "localhost";
-		private DB_BBDD = "";
+		private DB_BBDD = "prueba";
 		private DB_USER = "root";
 		private DB_PASSWORD = "";
 		private $conexion;
