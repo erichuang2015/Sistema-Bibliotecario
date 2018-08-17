@@ -15,7 +15,7 @@
 		}
 
 		//Métodos de consulta que devuelven arrays
-		public function InsertQuery(string $tabla, array $columnas = null, array $valores, array $marcadores = null)
+		public function InsertQuery(string $tabla, array $valores, array $marcadores = null, array $columnas = null)
 		{
 			if ($columnas == null) {
 				try {
@@ -37,12 +37,12 @@
 
 					//Comprobando si se han afectado columnas
 					$columnasAfectadas = $cons_prep->rowCount();
-					if ($columnasAfectadas <= 0) {
+					if ($columnasAfectadas == 0) {
 						 
-						 return 0;
+						 return "No se agregó ningún dato. Revisar bien la petición(query)";
 					} else {
 
-						return 1;
+						return "Se agregaro un nuevo dato";
 					}
 				} catch (PDOException $e) {
 					
@@ -85,9 +85,47 @@
 			}
 		}
 
-		public function deleteQuery(string $query)
+		public function DeleteQuery(string $tabla, string $campoEvaluar = null, string $condicional = null)
 		{
+			if ($campoEvaluar == null && $condicional == null) {
+				
+				try {
+					
+					$query = "DELETE FROM $tabla"; //Consulta de eliminación
 
+					$cons_prep = $conexion->prepare($query);
+					$cons_prep->execute();
+					$cons_prep->closeCursor();
+
+					$columnasAfectadas = $cons_prep->rowCount();
+					if ($columnasAfectadas == 0) {
+						
+						return "No se eliminó ningún dato";
+					} else {
+
+						return "Se han eliminado $columnasAfectadas datos";
+					}
+				} catch (PDOException $e) {
+					
+					die("Error " . $e->getMessage() . " en la línea " . $e->getLine());
+				}
+			} elseif ($campoEvaluar != null && $condicional != null) {
+				
+				try {
+					
+					$query = "DELETE FROM $tabla WHERE $campoEvaluar LIKE $condicional"; //Consulta de eliminación
+
+					$cons_prep = $conexion->prepare($query);
+					$cons_prep->execute();
+					$cons_prep->closeCursor();
+				} catch (PDOException $e) {
+					
+					die("Error " . $e->getMessage() . " en la línea " . $e->getLine());
+				}
+			} else {
+
+				return "Hubo un error a la hora de ejecutar la consulta. Por favor inténtelo de nuevo";
+			}
 		}
 
 		public function updateQuery(string $query)

@@ -2,15 +2,12 @@
 
 	try {
 		
-		$insert = array("Texto 1","Texto 2");
-		$columnas = array("Campo1");
-		$values_imploded = implode("','",$insert);
-		$keys_imploded = implode("",$columnas);
+		$campoEvaluar = "Campo1";
+		$condicional = "Condici%n";
 
-		$query = "INSERT INTO tabla1($keys_imploded) VALUES('Hola')";
+		$query = "DELETE FROM tabla1 WHERE $campoEvaluar LIKE '$condicional'";
 		
-		echo $query . "<br>";		
-		echo $values_imploded;
+		echo $query . "<br>";
 
 		$conexion = new PDO('mysql:host=localhost;dbname=prueba','root','');
 
