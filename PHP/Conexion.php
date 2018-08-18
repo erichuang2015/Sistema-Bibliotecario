@@ -128,11 +128,17 @@
 			}
 		}
 
-		public function updateQuery(string $tabla, array $set, string $some_column, string $some_value)
+		public function UpdateQuery(string $tabla, array $set, string $some_column = null, string $some_value = null)
 		{
-			if (is_assoc($set)) {
+			$columnas_set = preg_split("/[\s,]+/", array_column($set)); //Separando el array $set en string y luego en array con una expresión regular que los separa por comas o espacios en blanco.
+			$keys_set = preg_split("/[\s,]+/", array_keys($set)); //Separando el array $set en string y luego en array con una expresión regular que los separa por comas o espacios en blanco.
+
+			if (is_assoc($set) && $some_column != null && $some_value != null) {
 				
-				
+				for ($i = 0; $i <= count($set); $i++) { 
+					
+					$query = "UPDATE $tabla SET $columnas_set[$i] = $keys_set[$i] WHERE $some_column = $some_value";
+				}
 			}
 		}
 
