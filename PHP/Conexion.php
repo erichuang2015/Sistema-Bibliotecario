@@ -130,16 +130,24 @@
 
 		public function UpdateQuery(string $tabla, array $set, string $some_column = null, string $some_value = null)
 		{
-			$columnas_set = preg_split("/[\s,]+/", array_column($set)); //Separando el array $set en string y luego en array con una expresión regular que los separa por comas o espacios en blanco.
-			$keys_set = preg_split("/[\s,]+/", array_keys($set)); //Separando el array $set en string y luego en array con una expresión regular que los separa por comas o espacios en blanco.
+			$columnas_set = array_column($set); //Separando el array asociativo
+			$keys_set = array_keys($set); //Separando el array asociativo
 
 			if (is_assoc($set) && $some_column != null && $some_value != null) {
 				
-				for ($i = 0; $i <= count($set); $i++) { 
+				for ($i = 0; $i <= count($keys_set); $i++) { 
 					
-					$query = "UPDATE $tabla SET $columnas_set[$i] = $keys_set[$i] WHERE $some_column = $some_value";
+					$query = "UPDATE $tabla SET $keys_set[$i] = $columnas_set[$i] WHERE $some_column = $some_value";
+					$cons_prep = $conexion->prepare($query);
+					$cons_prep->execute();
 				}
+				$conexion->closeCursor();
+			} else {
+
+				return "Hay un error en los parámetros. Asegúrese que ha ingreso los DATOS CORRECTOS en los parámetros";
 			}
+
+			return "Correcto";
 		}
 
 		public function selectQuery(string $query)
