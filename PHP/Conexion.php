@@ -128,9 +128,12 @@
 			}
 		}
 
-		public function updateQuery(string $query)
+		public function updateQuery(string $tabla, array $set, string $some_column, string $some_value)
 		{
-
+			if (is_assoc($set)) {
+				
+				
+			}
 		}
 
 		public function selectQuery(string $query)
@@ -138,6 +141,12 @@
 			# code...
 		}
 		
+		//Función que comprueba si un array es asociativos
+		private function is_assoc(array $array) {
+
+			return array_keys( $array ) !== range( 0, count($array) - 1 );
+		}
+
 		// Variables usadas para establecer conexión y las configuraciones pertinentes
 		private DB_SERVER = "localhost";
 		private DB_BBDD = "prueba";
