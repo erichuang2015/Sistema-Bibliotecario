@@ -6,7 +6,7 @@
 		{
 			try {
 				
-				$conexion = new PDO('mysql:host=' . DB_SERVER . ';dbname=' . DB_BBDD,DB_USER,DB_PASSWORD,arrayOptions);
+				$conexion = new PDO('mysql:host=' . $his->DB_SERVER . ';dbname=' . $this->DB_BBDD,$this->DB_USER, $this->DB_PASSWORD, $this->arrayOptions);
 				exit();
 			} catch (PDOException $e) {
 				
@@ -24,7 +24,7 @@
 					$values_imploded = implode("','",$valores);
 					$query = "INSERT INTO $tabla VALUES('$values_imploded')";
 
-					$cons_prep = $conexion->prepare($query);
+					$cons_prep = $this->conexion->prepare($query);
 					if ($marcadores == null) {
 						
 						$cons_prep->execute();
@@ -58,7 +58,7 @@
 
 					$query = "INSERT INTO $tabla($keys_imploded) VALUES('$values_imploded')"; //Iniciando consulta
 
-					$cons_prep = $conexion->prepare($query); //Preparando consulta
+					$cons_prep = $this->conexion->prepare($query); //Preparando consulta
 					if ($marcadores == null) { //Executando consulta con caracteres escapados para evitar la inyección sql
 						
 						$cons_prep->execute();
@@ -93,7 +93,7 @@
 					
 					$query = "DELETE FROM $tabla"; //Consulta de eliminación
 
-					$cons_prep = $conexion->prepare($query);
+					$cons_prep = $this->conexion->prepare($query);
 					$cons_prep->execute();
 					$cons_prep->closeCursor();
 
@@ -115,7 +115,7 @@
 					
 					$query = "DELETE FROM $tabla WHERE $campoEvaluar LIKE $condicional"; //Consulta de eliminación
 
-					$cons_prep = $conexion->prepare($query);
+					$cons_prep = $this->conexion->prepare($query);
 					$cons_prep->execute();
 					$cons_prep->closeCursor();
 				} catch (PDOException $e) {
@@ -138,7 +138,7 @@
 				for ($i = 0; $i <= count($keys_set); $i++) { 
 					
 					$query = "UPDATE $tabla SET $keys_set[$i] = $columnas_set[$i] WHERE $some_column = $some_value";
-					$cons_prep = $conexion->prepare($query);
+					$cons_prep = $this->conexion->prepare($query);
 					$cons_prep->execute();
 				}
 				$conexion->closeCursor();
@@ -162,10 +162,10 @@
 		}
 
 		// Variables usadas para establecer conexión y las configuraciones pertinentes
-		private DB_SERVER = "localhost";
-		private DB_BBDD = "prueba";
-		private DB_USER = "root";
-		private DB_PASSWORD = "";
+		private $DB_SERVER = "localhost";
+		private $DB_BBDD = "prueba";
+		private $DB_USER = "root";
+		private $DB_PASSWORD = "";
 		private $conexion;
 		private $arrayOptions = array(
 			PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,
