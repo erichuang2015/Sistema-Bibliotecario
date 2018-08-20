@@ -6,7 +6,7 @@
 		{
 			try {
 				
-				$conexion = new PDO('mysql:host=' . $his->DB_SERVER . ';dbname=' . $this->DB_BBDD,$this->DB_USER, $this->DB_PASSWORD, $this->arrayOptions);
+				$this->conexion = new PDO('mysql:host=' . $this->DB_SERVER . ';dbname=' . $this->DB_BBDD,$this->DB_USER, $this->DB_PASSWORD, $this->arrayOptions);
 				exit();
 			} catch (PDOException $e) {
 				
@@ -15,7 +15,7 @@
 		}
 
 		//Métodos de consulta que devuelven arrays
-		public function InsertQuery(string $tabla, array $valores, array $marcadores = null, array $columnas = null)
+		public function InsertQuery(string $tabla, array $valores, array $columnas = null, array $marcadores = null) : string
 		{
 			if ($columnas == null) {
 				try {
@@ -42,13 +42,13 @@
 						 return "No se agregó ningún dato. Revisar bien la petición(query)";
 					} else {
 
-						return "Se agregaro un nuevo dato";
+						return "Se ha agregado un nuevo dato";
 					}
 				} catch (PDOException $e) {
 					
-					die("Error " . getMessage() . "en la línea " . $e->getLine());
+					die("Error " . $e->getMessage() . "en la línea " . $e->getLine());
 					exit();
-				}
+				} 
 			} else {
 				try {
 
@@ -73,10 +73,10 @@
 					$columnasAfectadas = $cons_prep->rowCount();
 					if ($columnasAfectadas <= 0) {
 						 
-						 return 0;
+						 return "";
 					} else {
 
-						return 1;
+						return "";
 					}
 				} catch (PDOException $e) {
 					
@@ -128,29 +128,45 @@
 			}
 		}
 
-		public function UpdateQuery(string $tabla, array $set, string $some_column = null, string $some_value = null)
+		public function UpdateQuery(string $tabla, array $set, string $some_column = null, string $some_value = null) : string
 		{
-			$columnas_set = array_column($set); //Separando el array asociativo
-			$keys_set = array_keys($set); //Separando el array asociativo
+			try {
+				$keys_set = array_keys($set); //Separando el array asociativo
 
-			if (is_assoc($set) && $some_column != null && $some_value != null) {
-				
-				for ($i = 0; $i <= count($keys_set); $i++) { 
+				if ($this->is_assoc($set) && $some_column != null && $some_value != null) {
+
+					$query = "UPDATE $tabla SET ";
+
+					for ($i = 0; $i < count($keys_set) ; $i++) { 
 					
-					$query = "UPDATE $tabla SET $keys_set[$i] = $columnas_set[$i] WHERE $some_column = $some_value";
+						$valorPorVuelta = $keys_set[$i];
+						if ($i != count($keys_set)-1) {
+
+							$query .= "$valorPorVuelta = $set[$valorPorVuelta], ";
+						}else {
+
+							$query .= "$valorPorVuelta = $set[$valorPorVuelta] ";
+						}
+					}
+
+					$query .= "WHERE $some_column = $some_value";
 					$cons_prep = $this->conexion->prepare($query);
 					$cons_prep->execute();
+
+				} else {
+
+					return "Hay un error en los parámetros. Asegúrese que ha ingreso los DATOS CORRECTOS en los parámetros";
 				}
-				$conexion->closeCursor();
-			} else {
 
-				return "Hay un error en los parámetros. Asegúrese que ha ingreso los DATOS CORRECTOS en los parámetros";
+				return "Correcto";
+
+			} catch (PDOException $e) {
+
+				 die("Error de conexión " . $e->getMessage() . " en la línea " . $e->getLine());
 			}
-
-			return "Correcto";
 		}
 
-		public function selectQuery(string $query)
+		public function SelectQuery(string $query)
 		{
 			# code...
 		}
