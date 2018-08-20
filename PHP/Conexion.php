@@ -166,12 +166,30 @@
 			}
 		}
 
-		public function SelectQuery(array $columnsSelect = null, string $tabla, string $someColumn, string $someValue)
+		public function SelectQuery(array $columnsSelect = null, string $tabla, string $someColumn = null, string $someValue = null)
 		{
 			if ($columnsSelect == null) {
 				
-				$sql = "SELECT * FROM $tabla WHERE $someColumn = $someValue";
+				if ($someColumn == null || $someValue == null=) {
+					
+					$query = "SELECT * FROM $tabla";
+				} else {
+
+					$query = "SELECT * FROM $tabla WHERE $someColumn = $someValue";
+				}
+			} else {
+
+				if ($someColumn == null || $someValue == null=) {
+					
+					$arrays_imploded = implode(",", $columnsSelect);
+					$query = "SELECT $arrays_imploded FROM $tabla";
+				} else {
+
+					$query = "SELECT * FROM $tabla WHERE $someColumn = $someValue";
+				}
 			}
+
+			private $query;
 		}
 		
 		//Función que comprueba si un array es asociativos
@@ -190,7 +208,7 @@
 			PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,
 			PDO::ATTR_EMULATE_PREPARES=>FALSE,
 			PDO::MYSQL_ATTR_INIT_COMMAND=>"SET NAMES 'utf8'",
-			PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_OBJ
+			PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC
 		);
 	}
  ?>
