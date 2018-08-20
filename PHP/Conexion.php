@@ -1,6 +1,6 @@
 <?php 
 
-	public class Conexion
+	class Conexion
 	{
 		function __construct()
 		{
@@ -166,9 +166,12 @@
 			}
 		}
 
-		public function SelectQuery(string $query)
+		public function SelectQuery(array $columnsSelect = null, string $tabla, string $someColumn, string $someValue)
 		{
-			# code...
+			if ($columnsSelect == null) {
+				
+				$sql = "SELECT * FROM $tabla WHERE $someColumn = $someValue";
+			}
 		}
 		
 		//Función que comprueba si un array es asociativos
