@@ -14,14 +14,20 @@
 		}
 
 		//Métodos de consulta que devuelven arrays
-		public function InsertQuery(string $tabla, array $valores, array $columnas = null, array $marcadores = null) : string
+		public function InsertQuery(string $tabla, array $valores, array $columnas = null, array $marcadores = null)
 		{
 			if ($columnas == null) {
 				try {
 
 					//Convirtiendo los array a strings para que el query pueda ejecutarse
 					$values_imploded = implode("','",$valores);
-					$query = "INSERT INTO $tabla VALUES('$values_imploded')";
+					if ($marcadores == null) {
+						
+						$query = "INSERT INTO $tabla VALUES('$values_imploded')";
+					} else {
+
+						$query = "INSERT INTO $tabla VALUES($values_imploded)";
+					}
 
 					$this->execQuery($query, $marcadores);
 				} catch (PDOException $e) {
@@ -35,8 +41,15 @@
 					$keys_imploded = implode($columnas);
 					$values_imploded = implode("','",$valores);
 
-					$query = "INSERT INTO $tabla($keys_imploded) VALUES('$values_imploded')"; //Iniciando consulta
+					if ($marcadores == null) {
+						
+						$query = "INSERT INTO $tabla($keys_imploded) VALUES('$values_imploded')"; //Iniciando consula
+					} else {
 
+						$query = "INSERT INTO $tabla($keys_imploded) VALUES($values_imploded)"; //Iniciando consula
+					}
+
+					echo $query;
 					$this->execQuery($query, $marcadores);
 				} catch (PDOException $e) {
 					
@@ -54,7 +67,7 @@
 				$query = "DELETE FROM $tabla"; //Consulta de eliminación
 			} elseif ($campoEvaluar != null && $condicional != null) {
 				
-				$query = "DELETE FROM $tabla WHERE $campoEvaluar LIKE $condicional"; //Consulta de eliminación
+				$query = "DELETE FROM $tabla WHERE $campoEvaluar LIKE '$condicional'"; //Consulta de eliminación
 			} else {
 
 				return "Hubo un error a la hora de ejecutar la consulta. Por favor inténtelo de nuevo";
@@ -63,7 +76,7 @@
 			$this->execQuery($query);
 		}
 
-		public function UpdateQuery(string $tabla, array $set, string $some_column = null, string $some_value = null) : string
+		public function UpdateQuery(string $tabla, array $set, string $some_column = null, string $some_value = null)
 		{
 			$keys_set = array_keys($set); //Separando el array asociativo
 
@@ -76,14 +89,14 @@
 					$valorPorVuelta = $keys_set[$i];
 					if ($i != count($keys_set)-1) {
 
-						$query .= "$valorPorVuelta = $set[$valorPorVuelta], ";
+						$query .= "$valorPorVuelta = '$set[$valorPorVuelta]', ";
 					}else {
 
-						$query .= "$valorPorVuelta = $set[$valorPorVuelta] ";
+						$query .= "$valorPorVuelta = '$set[$valorPorVuelta]' ";
 					}
 				}
 
-				$query .= "WHERE $some_column = $some_value";
+				$query .= "WHERE $some_column = '$some_value'";
 				$this->execQuery($query);
 			} else {
 
@@ -97,28 +110,28 @@
 		{
 			if ($columnsSelect == null) {
 				
-				if ($someColumn == null || $someValue == null=) {
+				if ($someColumn == null || $someValue == null) {
 					
 					$query = "SELECT * FROM $tabla";
 				} else {
 
-					$query = "SELECT * FROM $tabla WHERE $someColumn = $someValue";
+					$query = "SELECT * FROM $tabla WHERE $someColumn LIKE '$someValue'";
 				}
 			} else {
 
-				if ($someColumn == null || $someValue == null=) {
+				if ($someColumn == null || $someValue == null) {
 					
 					$arrays_imploded = implode(",", $columnsSelect);
 					$query = "SELECT $arrays_imploded FROM $tabla";
 				} else {
 
-					$query = "SELECT * FROM $tabla WHERE $someColumn = $someValue";
+					$query = "SELECT * FROM $tabla WHERE $someColumn LIKE '$someValue'";
 				}
 			}
 
-			$this->execQuery($query);
+			return $this->execQuery($query);
 
-			private $query;
+			$query;
 		}
 		
 		//Función que comprueba si un array es asociativos
@@ -129,7 +142,7 @@
 		}
 
 		//Función que ejecuta una consulta
-		public function execQuery(string $query, array $marcadores = null) : int
+		public function execQuery(string $query, array $marcadores = null)
 		{
 			try {
 				
@@ -143,13 +156,18 @@
 				}
 
 				$filasAfectadas = $cons_prep->rowCount();
+				if ($filasAfectadas == 0) {
+					
+					return "No se ha afectado ninguna fila";
+				} else {
+
+					return $cons_prep->fetchAll();
+				}
 				$cons_prep->closeCursor();
 			} catch (PDOException $e) {
 			
 				die("Error " . $e->getMessage() . " en la línea " . $e->getLine());	
 			}
-		
-			return $filasAfectadas;
 		}
 
 		// Variables usadas para establecer conexión y las configuraciones pertinentes
