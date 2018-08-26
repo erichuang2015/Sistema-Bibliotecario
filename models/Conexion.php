@@ -14,7 +14,7 @@
 		}
 
 		//Métodos de consulta que devuelven arrays
-		public function InsertQuery(string $tabla, array $valores, array $columnas = null, array $marcadores = null)
+		public static function InsertQuery(string $tabla, array $valores, array $columnas = null, array $marcadores = null)
 		{
 			if ($columnas == null) {
 				try {
@@ -58,7 +58,7 @@
 			}
 		}
 
-		public function DeleteQuery(string $tabla, string $campoEvaluar = null, string $condicional = null)
+		public static function DeleteQuery(string $tabla, string $campoEvaluar = null, string $condicional = null)
 		{
 			$query;
 
@@ -106,7 +106,7 @@
 			return "Correcto";	
 		}
 
-		public function SelectQuery(array $columnsSelect = null, string $tabla, string $someColumn = null, string $someValue = null)
+		public static function SelectQuery(array $columnsSelect = null, string $tabla, string $someColumn = null, string $someValue = null)
 		{
 			if ($columnsSelect == null) {
 				
@@ -142,7 +142,7 @@
 		}
 
 		//Función que ejecuta una consulta
-		public function execQuery(string $query, array $marcadores = null)
+		public static function execQuery(string $query, array $marcadores = null)
 		{
 			try {
 				
