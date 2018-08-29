@@ -172,7 +172,7 @@
 
 		// Variables usadas para establecer conexión y las configuraciones pertinentes
 		private $DB_SERVER = "localhost";
-		private $DB_BBDD = "prueba";
+		private $DB_BBDD = "";
 		private $DB_USER = "root";
 		private $DB_PASSWORD = "";
 		private $conexion;

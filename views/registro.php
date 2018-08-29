@@ -8,12 +8,12 @@
 </head>
 <body>
 	<div class="registro">
-		<form action="" method="post" class="registro2">
+		<form action="../controllers/loginController.php" method="post" class="registro2">
 			<h1>Registrarse</h1>
 			<br>
 			<h3>Nombres</h3>
-			<label for="nombre">
-				<input type="text" name="nombre" placeholder="Nombre" id="nombre">
+			<label for="nombres">
+				<input type="text" name="nombres" placeholder="Nombres" id="nombre">
 			</label>
 			<br><br>
 			<h3>Apellidos</h3>
@@ -35,7 +35,7 @@
 			<label for="correo">
 				<input type="email" name="correo" placeholder="Correo electrónico" id="correo" required="">
 			</label>
-			<input type="checkbox">Recibir notificaciones
+			<input type="checkbox" name="notis" value="si">Recibir notificaciones
 			<br><br>
 			<input type="submit" value="Registrarse">
 		</form>
