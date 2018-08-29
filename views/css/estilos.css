@@ -1,0 +1,41 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-image: url(../imagenes/hola.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 23px;
+	text-shadow: 2px 2px 8px #000000;
+	color: #ffffff;
+}
+
+.login2{
+	top: 15%;
+	left: 40%;	
+	background-color: transparent;
+	padding-top: 55px;
+	width: 320px ;
+	height: 420px;
+	position: absolute;
+	transform: (-50%, 50%);
+	box-sizing: border-box;
+	border-radius: 15px;
+	text-align: center;
+	border-style: double;
+	border-width: 10px;
+	border-color: #000000
+
+}
+
+	
+
+
+
+
+
