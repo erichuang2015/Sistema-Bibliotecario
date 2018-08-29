@@ -1,0 +1,61 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-image: url(../imagenes/libro.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.registro2{
+	top: 10%;
+	left: 23%;	
+	background-color: transparent;
+	padding-top: 15px;
+	padding-left: 60px;
+	width: 750px ;
+	height: 500px;
+	position: absolute;
+	transform: (-50%, 50%);
+	box-sizing: border-box;
+	border-radius: 15px;
+	text-align: left;
+	border-style: double;
+	border-width: 10px;
+	border-color: #000000
+}
+
+h3{
+	font-style: italic;
+	font-size: 20px;
+}
+
+h1{
+	color: #ffffff;
+ 	font-family: 'Love Ya Like A Sister', cursive;
+ 	text-shadow: 2px 2px 4px #000000; 
+ 	font-size: 40px;
+ 	text-align: center;
+}
+
+.registro input[type="text"], input[type="email"], input[type="password"]{
+	border-radius: 5px;
+	height: 20px;
+	border-width: 1px;
+	background-color:  #D9F89B;
+
+}
+.registro2 input[type="submit"]{
+	border:none;
+	outline: none;
+	background: #4F6525;
+	font-family: verdana;
+	font-weight: bold;
+	height: 30px;
+	width: 300px;
+	color: #ffffff;
+	font-size: 20px;
+	border-radius: 20px;
