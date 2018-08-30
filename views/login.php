@@ -11,11 +11,11 @@
 		<form action="" method="post" class="login2"  >
 			<h1>Iniciar Sesión</h1>
 			<br>
-			<label for="Usuario"><p><b>Nombre de Usuario</b></p>
-			<p><input type= "text" name= usuario placeholder= "Usuario" id="Usuario" require></p>
+			<label for="usuario"><p><b>Nombre de Usuario</b></p>
+			<input type="text" class="inputLogin" name="usuario" placeholder= "Usuario" id="Usuario" required autocomplete="off">
 			</label>			
-			<label for="Contraseña"> <p><b>Contraseña</b></p>
-			<input type="password" name=contraseña placeholder="Contraseña" id="Contraseña" require>
+			<label for="contrasenia"> <p><b>Contraseña</b></p>
+			<input type="password" class="inputLogin" name="contrasenia" placeholder="Contraseña" id="contrasenia" required autocomplete="off">
 			</label>
 			<br>
 			<input type="submit" value="Iniciar sesión" name="" >
