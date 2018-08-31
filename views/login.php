@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="../views/css/login.css">
+	<link rel="stylesheet" type="text/css" href="fuentes/fuentes.css">
 </head>
 <body>
 	
@@ -20,7 +21,8 @@
 			<br>
 			<input type="submit" value="Iniciar sesión" name="" >
 			<a href="registro.php">Registrarse</a>
-
+			<input type="radio" id="hombre" name="genero" value="M"><label for="hombre">Hombre</label>
+			<input type="radio" id="mujer" name="genero" value="F"><label for="mujer">Mujer</label>
 		
 		</form>
 	</div>	
