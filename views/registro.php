@@ -37,6 +37,10 @@
 				<input type="email" class="inputRegistro" name="correo" placeholder="Correo electrónico" id="correo" required autocomplete="off">
 			<input type="checkbox" name="notis" id="notis" value="si"><label for="notis">Recibir notificaciones</label>
 			<br><br>
+			<div class="radio">
+			<input type="radio" id="hombre" name="genero" value="M"><label for="hombre">Hombre</label>
+			<input type="radio" id="mujer" name="genero" value="F"><label for="mujer">Mujer</label>
+			</div>
 			<input type="submit" value="Registrarse">
 		</form>
 	</div>

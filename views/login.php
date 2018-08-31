@@ -20,10 +20,8 @@
 			</label>
 			<br>
 			<input type="submit" value="Iniciar sesión" name="" >
-			<a href="registro.php">Registrarse</a>
-			<input type="radio" id="hombre" name="genero" value="M"><label for="hombre">Hombre</label>
-			<input type="radio" id="mujer" name="genero" value="F"><label for="mujer">Mujer</label>
-		
+			<a href="registro.php">Registrarse</a>		
+
 		</form>
 	</div>	
 	
