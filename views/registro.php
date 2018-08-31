@@ -3,39 +3,39 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Registro</title>
-	<link rel="stylesheet" type="text/css" href="css/registro.css">
+	<link rel="stylesheet" type="text/css" href="../views/css/registro.css">
 	<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
 </head>
 <body>
 	<div class="registro">
-		<form action="" method="post" class="registro2">
+		<form action="../controllers/loginController.php" method="post" class="registro2">
 			<h1>Registrarse</h1>
 			<br>
-			<h3>Nombres</h3>
-			<label for="nombre">
-				<input type="text" name="nombre" placeholder="Nombre" id="nombre">
+			<label for="nombres">
+				<h3>Nombres</h3>
 			</label>
+				<input type="text" class="inputRegistro" name="nombres" placeholder="Nombres" id="nombres" autocomplete="off">
 			<br><br>
-			<h3>Apellidos</h3>
 			<label for="apellidos">
-				<input type="text" name="apellidos" placeholder="Apellidos" id="apellidos">
+				<h3>Apellidos</h3>
 			</label>
+				<input type="text" class="inputRegistro" name="apellidos" placeholder="Apellidos" id="apellidos" autocomplete="off">
 			<br><br>
-			<h3>Escriba un nombre de Usuario:</h3>
-			<label for="usuario"></label>
-				<input type="text" name="usuario" placeholder="Nombre de Usuario" id="usuario" required="">
+			<label for="usuario">
+				<h3>Escriba un nombre de Usuario:</h3>
 			</label>
+				<input type="text" class="inputRegistro" name="usuario" placeholder="Nombre de Usuario" id="usuario" required autocomplete="off">
 			<br><br>
-			<h3>Escriba su contraseña:</h3>
-			<label for="contraseña" >
-				<input type="password" name="contraseña" placeholder="Contraseña" id="contraseña" required="">
+			<label for="contraseña">
+				<h3>Escriba su contraseña:</h3>
 			</label>
+				<input type="password" class="inputRegistro" name="contraseña" placeholder="Contraseña" id="contraseña" required autocomplete="off">
 			<br><br>
-			<h3>Escriba su correo electrónico:</h3>
 			<label for="correo">
-				<input type="email" name="correo" placeholder="Correo electrónico" id="correo" required="">
+				<h3>Escriba su correo electrónico:</h3>
 			</label>
-			<input type="checkbox">Recibir notificaciones
+				<input type="email" class="inputRegistro" name="correo" placeholder="Correo electrónico" id="correo" required autocomplete="off">
+			<input type="checkbox" name="notis" id="notis" value="si"><label for="notis">Recibir notificaciones</label>
 			<br><br>
 			<input type="submit" value="Registrarse">
 		</form>

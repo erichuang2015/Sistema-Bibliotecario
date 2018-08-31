@@ -4,7 +4,7 @@
 }
 
 body{
-	background-image: url(../imagenes/hola.jpg);
+	background-image: url(../../views/imagenes/hola.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -16,14 +16,14 @@ body{
 }
 
 .login2{
+	position: absolute;
 	top: 15%;
 	left: 40%;	
 	background-color: transparent;
 	padding-top: 55px;
 	width: 320px ;
 	height: 420px;
-	position: absolute;
-	transform: (-50%, 50%);
+	display: inline-block;
 	box-sizing: border-box;
 	border-radius: 15px;
 	text-align: center;
@@ -41,15 +41,33 @@ h1{
 }
 
 .login input{
-	width: 100px;
+	width: 80%;
 	margin-bottom: 20px;
 }
 
-.login input[type="text"], input[type="password"]{
+.login label {
+	color: #000000;
+	text-shadow: 2px 2px 2px #ffffff;	
+}
+
+.inputLogin{
 	border:none;
 	border-bottom: 1px solid #ffffff;
 	background: transparent;
 	height: 20px;
+	color: white;
+	text-shadow: 2px 2px 2px #000000;
+	padding: 5px;
+}
+
+.inputLogin::placeholder {
+	color: white;
+	text-shadow: 2px 2px 2px #000000;
+	text-align: center;
+}
+
+.inputLogin:focus {
+	outline: none;
 }
 
 .login input[type="submit"]{

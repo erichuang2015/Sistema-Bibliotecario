@@ -10,14 +10,14 @@ body{
 	background-position: center;
 	background-size: cover;
 }
-.registro2{
+
+.registro2{	
+	display: inline-block;
 	top: 10%;
 	left: 23%;	
 	background-color: transparent;
-	padding-top: 15px;
-	padding-left: 60px;
+	padding: 15px 60px;
 	width: 750px ;
-	height: 500px;
 	position: absolute;
 	transform: (-50%, 50%);
 	box-sizing: border-box;
@@ -41,13 +41,18 @@ h1{
  	text-align: center;
 }
 
-.registro input[type="text"], input[type="email"], input[type="password"]{
+.registro .inputRegistro{
 	border-radius: 5px;
-	height: 20px;
-	border-width: 1px;
-	background-color:  #D9F89B;
-
+	height: 17px;
+	border: none;
+	border-bottom: 3px solid #000000;
+	padding: 5px;
 }
+
+.registro .inputRegistro:focus {
+	outline: none;
+}
+
 .registro2 input[type="submit"]{
 	border:none;
 	outline: none;
