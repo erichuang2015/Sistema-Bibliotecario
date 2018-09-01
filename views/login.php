@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="../views/css/login.css">
-	<link rel="stylesheet" type="text/css" href="fuentes/fuentes.css">
+	<link rel="stylesheet" type="text/css" href="css/fuentes.css">
 </head>
 <body>
 	
@@ -13,7 +13,7 @@
 			<h1>Iniciar Sesión</h1>
 			<br>
 			<label for="usuario"><p><b>Nombre de Usuario</b></p>
-			<input type="text" class="inputLogin" name="usuario" placeholder= "Usuario" id="Usuario" required autocomplete="off">
+			<input type="text" class="inputLogin" name="usuario" placeholder= "Usuario" id="usuario" required autocomplete="off">
 			</label>			
 			<label for="contrasenia"> <p><b>Contraseña</b></p>
 			<input type="password" class="inputLogin" name="contrasenia" placeholder="Contraseña" id="contrasenia" required autocomplete="off">

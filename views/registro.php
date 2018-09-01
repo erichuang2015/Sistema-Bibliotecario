@@ -5,6 +5,7 @@
 	<title>Registro</title>
 	<link rel="stylesheet" type="text/css" href="../views/css/registro.css">
 	<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/fuentes.css">
 </head>
 <body>
 	<div class="registro">
