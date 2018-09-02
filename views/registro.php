@@ -36,11 +36,11 @@
 				<h3>Escriba su correo electrónico:</h3>
 			</label>
 				<input type="email" class="inputRegistro" name="correo" placeholder="Correo electrónico" id="correo" required autocomplete="off">
-			<input type="checkbox" name="notis" id="notis" value="si"><label for="notis">Recibir notificaciones</label>
+			</label>
 			<br><br>
 			<div class="radio">
-			<input type="radio" id="hombre" name="genero" value="M"><label for="hombre">Hombre</label>
-			<input type="radio" id="mujer" name="genero" value="F"><label for="mujer">Mujer</label>
+				<input type="radio" name="genero" value="Hombre" id="hombre" class="inputHombre">Hombre<label for="hombre"></label>
+				<input type="radio" name="genero" value="Mujer" id="mujer" class="inputMujer">Mujer<label for="mujer"></label>
 			</div>
 			<input type="submit" value="Registrarse">
 		</form>

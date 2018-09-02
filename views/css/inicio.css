@@ -1,0 +1,24 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+}
+
+.nav{
+	border:2px solid #000000;
+	margin-top:100px;
+	width: 200px;
+	height: 500px;
+	
+}
+
+.libros li{
+	margin-bottom: 50px;
+	border: 1px solid #456433;
+
+}
+
+.nav .ul h1{
+	
+}

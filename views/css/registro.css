@@ -65,3 +65,8 @@ h1{
 	color: #ffffff;
 	font-size: 20px;
 	border-radius: 20px;
+}
+
+.registro .radio{
+	font-family: 'Oswald', sans-serif;
+}
