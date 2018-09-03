@@ -17,7 +17,8 @@ body{
 	left: 23%;	
 	background-color: transparent;
 	padding: 15px 60px;
-	width: 750px ;
+	width: 750px;
+	height: 550px;
 	position: absolute;
 	transform: (-50%, 50%);
 	box-sizing: border-box;
@@ -30,7 +31,7 @@ body{
 
 h3{
 	font-style: italic;
-	font-size: 20px;
+	font-size: 15px;
 	font-family: 'Montserrat', sans-serif;
 }
 

@@ -37,11 +37,12 @@
 			</label>
 				<input type="email" class="inputRegistro" name="correo" placeholder="Correo electrónico" id="correo" required autocomplete="off">
 			</label>
-			<br><br>
+			<br>
 			<div class="radio">
 				<input type="radio" name="genero" value="Hombre" id="hombre" class="inputHombre">Hombre<label for="hombre"></label>
 				<input type="radio" name="genero" value="Mujer" id="mujer" class="inputMujer">Mujer<label for="mujer"></label>
 			</div>
+			<br>
 			<input type="submit" value="Registrarse">
 		</form>
 	</div>

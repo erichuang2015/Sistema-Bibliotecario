@@ -5,6 +5,10 @@
 	list-style: none;
 }
 
+body{
+	background-color: #AE5D43;
+}
+
 .nav{
 	border:2px solid #000000;
 	margin-top:100px;
@@ -19,6 +23,8 @@
 
 }
 
-.nav .ul h1{
+.nav  h2{ 
+	padding-left: 60px;
+	font-family: 'Quicksand', sans-serif; 
 	
 }
