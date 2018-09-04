@@ -17,7 +17,8 @@ body{
 	left: 23%;	
 	background-color: transparent;
 	padding: 15px 60px;
-	width: 750px ;
+	width: 750px;
+	height: 550px;
 	position: absolute;
 	transform: (-50%, 50%);
 	box-sizing: border-box;
@@ -30,7 +31,8 @@ body{
 
 h3{
 	font-style: italic;
-	font-size: 20px;
+	font-size: 15px;
+	font-family: 'Montserrat', sans-serif;
 }
 
 h1{
@@ -57,10 +59,15 @@ h1{
 	border:none;
 	outline: none;
 	background: #4F6525;
-	font-family: verdana;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
 	height: 30px;
 	width: 300px;
 	color: #ffffff;
 	font-size: 20px;
 	border-radius: 20px;
+}
+
+.registro .radio{
+	font-family: 'Oswald', sans-serif;
+}

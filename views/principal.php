@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Sistema bibliotecario | Administrador</title>
+	<title>Inicio</title>
+	<link rel="stylesheet" type="text/css" href="../views/css/inicio.css">
 </head>
 <body>
+
 	
 </body>
 </html>

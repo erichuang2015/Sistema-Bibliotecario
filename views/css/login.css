@@ -75,7 +75,7 @@ h1{
 	border:none;
 	outline: none;
 	background: #4F6525;
-	font-family: 'Courgette', cursive;
+	font-family: 'Lato', sans-serif;
 	font-weight: bold;
 	height: 30px;
 	width: 300px;
@@ -93,7 +93,7 @@ a{
 	height: 30px;
 	font-size: 20px;
 	padding: 5px;
-	font-family: 'Comfortaa', cursive;
+	font-family: 'Courgette', cursive;
 }
 
 	
