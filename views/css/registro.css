@@ -12,27 +12,28 @@ body{
 }
 
 .registro2{	
-	display: inline-block;
-	top: 10%;
-	left: 23%;	
-	background-color: transparent;
-	padding: 15px 60px;
-	width: 750px;
-	height: 550px;
 	position: absolute;
+	left: 0px;
+	right: 0px;
+	background-color: transparent;
+	padding: 15px 60px 30px 60px;
+	width: 750px;
+	margin: 7% auto;
+	display: inline-block;
 	transform: (-50%, 50%);
 	box-sizing: border-box;
 	border-radius: 15px;
 	text-align: left;
 	border-style: double;
 	border-width: 10px;
-	border-color: #000000
+	border-color: #000000;
 }
 
 h3{
 	font-style: italic;
 	font-size: 15px;
 	font-family: 'Montserrat', sans-serif;
+ 	text-shadow: 2px 2px 4px #ffffff; 
 }
 
 h1{
@@ -43,7 +44,7 @@ h1{
  	text-align: center;
 }
 
-.registro .inputRegistro{
+.inputRegistro{
 	border-radius: 5px;
 	height: 17px;
 	border: none;
@@ -51,7 +52,7 @@ h1{
 	padding: 5px;
 }
 
-.registro .inputRegistro:focus {
+.inputRegistro:focus {
 	outline: none;
 }
 
@@ -66,8 +67,27 @@ h1{
 	color: #ffffff;
 	font-size: 20px;
 	border-radius: 20px;
+	position: relative;
+	margin: 25px auto;
 }
 
-.registro .radio{
+.radio{
 	font-family: 'Oswald', sans-serif;
+}
+
+.mitadUno, .mitadDos {
+	display: inline-block;
+	padding: 15px;
+}
+
+.mitadDos {
+	position: relative;
+	top: 25px;
+	margin-left: 10px;
+}
+
+.dia, .mes, .anio {
+	border-width: 0px;
+	border-radius: 5px;
+	padding: 3px;
 }

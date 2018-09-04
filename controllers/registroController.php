@@ -1,17 +1,28 @@
 <?php 
 
 	require_once("../models/Conexion.php");
-	$conexion = new Conexion();
 
 	$nombres = $_POST["nombres"];
 	$apellidos = $_POST["apellidos"];
 	$nom_usuario = $_POST["usuario"];
-	$contra = $_POST["contraseña"];
+	$contra = $_POST["contrasenia"];
 	$email = $_POST["correo"];
-	//$edad;
-	//$sexo;
-	$notificaciones = $_POST["notis"];
+	$diaCumple = $_POST["dia"];
+	$mesCumple = $_POST["mes"];
+	$anioCumple = $_POST["anio"];
+	$edad = date("Y") - $anioCumple;
+	$sexo = $_POST["genero"];
 
-	echo "$notificaciones";
+	//Cifrando ontraseña
+
+	try {
+		
+		$valores = [":nombres, :apellidos, :apodo, :contra, :email, :nacimiento, :edad, :sexo"];
+
+		$conexion->InsertQuery("usuarios",  null,);
+
+	} catch (PDOException $e) {
+		die();
+	}
 
  ?>
