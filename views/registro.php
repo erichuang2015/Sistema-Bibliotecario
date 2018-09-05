@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/fuentes.css">
 </head>
 <body>
-		<form action="../controllers/loginController.php" method="post" class="registro2">
+		<form action="../controllers/registroController.php" method="post" class="registro2">
 			<h1>Registrarse</h1>
 			<br>
 			<div class="mitadUno">
