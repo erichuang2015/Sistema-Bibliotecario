@@ -2,14 +2,23 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Sistema bibliotecario | Inicio</title>
-	<link rel="stylesheet" type="text/css" href="css/inicio.css">
-	<link rel="stylesheet" type="text/css" href="css/fuentes.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../views/css/inicio.css">
+	<link rel="stylesheet" type="text/css" href="../views/css/fuentes.css">
 </head>
 <body>
+	<header class="nav1"> 
 
-	<div class="nav">
+		<ul>
+			<li><a href=""></a>Inicio</li>
+			<li><a href=""></a>Conocenos</li>
+			<li><a href=""></a></li>
+		</ul>
+
+	</header>
+
+	<div class="nav2">
 	<ul class="libros">
 		<h2>Libros</h2>
 		<li><a href="">Romance</a></li>
@@ -21,7 +30,6 @@
 
 	</ul>	
 	</div>
-	<script src="js/jquery.js"></script>
-	
+
 </body>
 </html>

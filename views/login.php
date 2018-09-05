@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="../views/css/login.css">
-	<link rel="stylesheet" type="text/css" href="css/fuentes.css">
+	<link rel="stylesheet" type="text/css" href="../views/css/fuentes.css">
 </head>
 <body>
 	
@@ -24,6 +24,5 @@
 
 		</form>
 	</div>	
-	
 </body>
 </html>
