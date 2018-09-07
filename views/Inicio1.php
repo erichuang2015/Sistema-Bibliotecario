@@ -28,18 +28,75 @@
 			<span id="nomCat">Nombre categoria</span>
 			<i class="fas fa-angle-double-right"></i>
 			<br>
-			<span id="nomCat">Nombre categoria</span>
 			<br>
 			<span id="nomCat">Nombre categoria</span>
+			<i class="fas fa-angle-double-right"></i>
+			<br>
 			<br>
 			<span id="nomCat">Nombre categoria</span>
+			<i class="fas fa-angle-double-right"></i>
+			<br>
 			<br>
 			<span id="nomCat">Nombre categoria</span>
+			<i class="fas fa-angle-double-right"></i>
+			<br>
 			<br>
 			<span id="nomCat">Nombre categoria</span>
+			<i class="fas fa-angle-double-right"></i>
+			<br>
+			<br>
+			<span id="nomCat">Nombre categoria</span>
+			<i class="fas fa-angle-double-right"></i>
 			<br>
 		</aside>
 	</section>
+	<div class="letra"><h2>Nombre de categoria</h2></div>
+	<div class="fila">
+		<div class="hola row">
+			<div class="cartas col-md-3">
+				<div class="card" style="width: 13rem;">
+				  <img class="card-img-top" src="../views/imagenes/libro.jpg" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title"Nombre del librotitle</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				  </div>
+				</div>
+			</div>
+			<div class="cartas col-md-3">
+				<div class="card" style="width: 13rem;">
+				  <img class="card-img-top" src="../views/imagenes/libro.jpg" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title"Nombre del libro title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				  </div>
+				</div>
+			</div>
+			<div class="cartas col-md-3">
+				<div class="card" style="width: 13rem;">
+				  <img class="card-img-top" src="../views/imagenes/libro.jpg" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title"Nombre del libro title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card" style="width: 13rem;">
+				  <img class="card-img-top" src="../views/imagenes/libro.jpg" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title"Nombre del libro title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
 
 
 	<script src="../views/js/jquery.js"></script>
