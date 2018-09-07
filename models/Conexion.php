@@ -124,8 +124,9 @@
 					$arrays_imploded = implode(",", $columnsSelect);
 					$query = "SELECT $arrays_imploded FROM $tabla";
 				} else {
-
-					$query = "SELECT * FROM $tabla WHERE $someColumn LIKE '$someValue'";
+					
+					$arrays_imploded = implode(",", $columnsSelect);
+					$query = "SELECT $arrays_imploded FROM $tabla WHERE $someColumn LIKE '$someValue'";
 				}
 			}
 
