@@ -1,0 +1,27 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+.nav{
+	background-color: rgba(171, 25, 69, 0.9);
+	padding-left: 20px ;
+	height: 40px;
+
+}
+
+.nav li{
+	margin-left: 50px;
+	margin-top: 5px;
+	float: right;
+	font-family: 'Noto Serif JP', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	
+}
+
+.nav a{
+	
+}
