@@ -4,6 +4,7 @@
 
 	$usuario = addslashes($_POST['usuario']);
 	$password = addslashes($_POST['contrasenia']);
+	$recordar = $_POST['recordar'];
 
 	$passwordBBDD = array_column($conexion->SelectQuery(['Password'],"usuarios","Apodo",$usuario), "Password");
 
@@ -23,6 +24,10 @@
 			$_SESSION['edad'] = $datos[0]['Edad'];
 			$_SESSION['sexo'] = $datos[0]['Sexo'];
 			$_SESSION['permisos'] = $datos[0]['Permisos'];
+
+			if ($recordar == "on") {
+				setcookie("usuario", $_SESSION['nombres'],time()+604800);
+			}
 
 			header("Location: ../views/inicio.php");
 

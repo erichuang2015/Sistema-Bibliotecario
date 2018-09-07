@@ -1,0 +1,109 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial;
+}
+
+ul {
+	list-style: none;
+}
+
+a{
+	color: #000000;
+}
+
+/* Nombre del libro */
+h1 {
+	display: inline-block;
+	margin-top: 10px;
+	position: absolute;
+	left: 35%;
+	font-size: 55px;
+}
+
+/* fin nombre del libro */
+
+/* Barra de búsqueda */
+.searchbar {
+	display: inline-block;
+	position: relative;
+	left: 75%;
+	margin: 28px;
+}
+
+.searchbar #search {
+	position: relative;
+	left: 5px;
+	border-width: 0px;
+	border-top: 1px inset grey;
+	border-left: 1px inset grey;
+	border-bottom: 1px inset grey;
+	border-radius: 5px 0px 0px 5px;
+	padding: 6px;
+	background-color: #ffffff;
+}
+
+.searchbar #search:focus {
+	outline: none;
+}
+
+.searchbar #search li {
+	margin: 5px;
+}
+
+.searchbar #bar {
+	border-top: 1px inset grey;
+	border-bottom: 1px inset grey;
+	border-right: 1px inset grey;
+	border-left: none;
+	border-radius: 0px 5px 5px 0px;
+	padding: 10px;
+	width: 80%;
+}
+
+.searchbar #bar:focus {
+	outline: none;
+}
+
+/* fin barra de búsqueda */
+
+/* Categorias */
+#categorias {
+	padding: 10px 30px;
+	border-right: 1px inset #000000;
+	border-bottom: 1px inset #000000;
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#down {
+	display: inline-block;
+	padding: 5px;
+}
+
+#libros li {
+	margin-left: 20px;
+}
+
+#down:active .nomCat {
+	display: none;
+}
+
+/* fin categorias*/
+
+#leerlibro {
+	text-align: justify;
+	display: inline-block;
+	width: 700px;
+	height: 550px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	margin: 10px 10px 10px 23%;
+	padding: 15px;
+}

@@ -20,16 +20,16 @@ body{
 	top: 15%;
 	left: 40%;	
 	background-color: transparent;
-	padding-top: 55px;
+	padding-top: 25px;
+	padding-bottom: 25px;
 	width: 320px ;
-	height: 420px;
 	display: inline-block;
 	box-sizing: border-box;
 	border-radius: 15px;
 	text-align: center;
 	border-style: double;
 	border-width: 10px;
-	border-color: #000000
+	border-color: #000000;
 
 }
 
@@ -40,7 +40,7 @@ h1{
  	font-size: 40px;
 }
 
-.login input{
+.login input:not(#recordar){
 	width: 80%;
 	margin-bottom: 20px;
 }

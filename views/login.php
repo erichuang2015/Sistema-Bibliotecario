@@ -19,6 +19,8 @@
 			<input type="password" class="inputLogin" name="contrasenia" placeholder="Contraseña" id="contrasenia" required autocomplete="off">
 			</label>
 			<br>
+			<input type="checkbox" name="recordar" id="recordar"><label for="recordar">Recordar aquí</label>
+			<br>
 			<input type="submit" value="Iniciar sesión" id="submit">
 			<a href="registro.php">Registrarse</a>
 		</form>
