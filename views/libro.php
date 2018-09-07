@@ -20,7 +20,7 @@
 	</header>
 	<section class="main">
 		<aside id="categorias">
-			<h2>Nombre Usuario</h2>
+			<h2>Administrador</h2>
 			<br>
 			<hr class="hr">
 			<br>

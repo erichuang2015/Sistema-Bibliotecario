@@ -1,0 +1,98 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial;
+}
+
+h1 {
+	display: inline-block;
+	margin-top: 10px;
+	position: absolute;
+	left: 35%;
+	font-size: 55px;
+}
+
+/* Categorias */
+#categorias {
+	padding: 10px 30px;
+	border-right: 1px inset #000000;
+	border-bottom: 1px inset #000000;
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#down {
+	display: inline-block;
+	padding: 5px;
+}
+
+#libros li {
+	margin-left: 20px;
+}
+
+#down:active .nomCat {
+	display: none;
+}
+
+/* fin categorias*/
+
+/* Editar libros*/
+.editarlibros {
+	text-align: justify;
+	display: inline-block;
+	width: 500px;
+	height: 550px;
+	margin: 150px 10px 10px 23%;
+	padding: 15px;
+}
+
+.editarlibros .img {
+	width: 150px;
+	display: inline-block;
+}
+
+.editarlibros img {
+	width: 150px;
+}
+
+.editarlibros #infolibro {
+	position: absolute;
+	display: inline-block;
+	width: 500px;
+	margin-left: 15px;
+}
+
+.botones {
+	margin-left: 25px;
+	margin-top: 10px;
+}
+
+.botones button {
+	padding: 10px;
+	width: 90px;
+	border: 0px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.botones #editar {
+	background-color: orange;
+	border-bottom: 5px solid #C36D0B;
+}
+
+.botones #borrar {
+	background-color: red;
+	border-bottom: 5px solid #B80707;
+}
+
+.botones #editar:focus, #borrar:focus {
+	outline: 0px;
+	border-bottom: 0px;
+	padding: 15px;
+}
