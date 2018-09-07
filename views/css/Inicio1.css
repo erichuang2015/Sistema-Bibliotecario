@@ -98,7 +98,13 @@ img{
 
 aside h3{
 	font-family: 'Fjalla One', sans-serif;
+
 }
+
+span{
+	font-family: 'Source Code Pro', monospace;
+}
+
 
 #down {
 	display: inline-block;
@@ -114,3 +120,28 @@ aside h3{
 }
 
 /* fin categorias*/
+
+.letra h2{
+	font-family: 'Acme', sans-serif;
+	font-size: 50px;
+}
+
+.letra{
+	margin-left: 300px;
+	margin-top: 40px;
+}
+
+/*Comienzo de Cartas*/
+.hola{
+	position: relative;
+	top:20px;
+	left: 270px;
+	margin-bottom: 10px;
+}
+
+
+.hola img{
+	width: 150px;
+	height: 80px;
+	padding-left: 40px;
+}
