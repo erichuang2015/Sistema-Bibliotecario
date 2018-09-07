@@ -71,17 +71,22 @@ h1{
 	outline: none;
 }
 
-.login input[type="submit"]{
+#submit{
 	border:none;
-	outline: none;
 	background: #4F6525;
 	font-family: 'Lato', sans-serif;
 	font-weight: bold;
-	height: 30px;
+	height: 35px;
 	width: 300px;
 	color: #ffffff;
 	font-size: 20px;
 	border-radius: 20px;
+	border-bottom: 5px solid #425420;
+}
+
+#submit:focus {
+	border: none;
+	outline: none;
 }
 
 a{

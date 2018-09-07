@@ -130,8 +130,6 @@
 			}
 
 			return $this->execQuery($query);
-
-			$query;
 		}
 		
 		//Función que comprueba si un array es asociativos

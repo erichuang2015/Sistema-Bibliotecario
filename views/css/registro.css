@@ -56,19 +56,24 @@ h1{
 	outline: none;
 }
 
-.registro2 input[type="submit"]{
+#submit{
 	border:none;
-	outline: none;
 	background: #4F6525;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
-	height: 30px;
+	height: 35px;
 	width: 300px;
 	color: #ffffff;
 	font-size: 20px;
 	border-radius: 20px;
 	position: relative;
 	margin: 25px auto;
+	border-bottom: 5px solid #425420;
+}
+
+#submit:focus {
+	border: none;
+	outline: none;
 }
 
 .radio{

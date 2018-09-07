@@ -1,3 +1,9 @@
+<?php 
+	if (isset($_SESSION['usuario'])) {
+		header("Location: ../index.php");
+	}
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +56,7 @@
 				</div>
 			</div>
 			<br>
-			<input type="submit" value="Registrarse">
+			<input type="submit" value="Registrarse" id="submit">
 		</form>
 </body>
 </html>
