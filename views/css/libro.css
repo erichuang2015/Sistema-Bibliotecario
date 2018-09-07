@@ -97,6 +97,7 @@ h1 {
 
 /* fin categorias*/
 
+/* Libros */
 #leerlibro {
 	text-align: justify;
 	display: inline-block;
@@ -106,4 +107,47 @@ h1 {
 	overflow-y: scroll;
 	margin: 10px 10px 10px 23%;
 	padding: 15px;
+}
+
+/* fin libros */
+
+/* Valoraciones */
+
+.rate {
+	display: inline-block;
+	position: absolute;
+	margin: 5px 0px 10px 35px;
+}
+
+.rate .comentarios {
+	height: 350px;
+	overflow-y: scroll;
+}
+
+.rate h2 {
+	margin-bottom: 10px;
+}
+
+.rate .foto {
+	display: inline-block;
+}
+
+.rate .foto img {
+	width: 30px;
+	display: inline-block;
+}
+
+.rate .comentarios .nomUsuario {
+	display: inline-block;
+	font-weight: bold;
+}
+
+.rate .texto {
+	display: inline-block;
+	font-size: 12px;
+	vertical-align: top;
+}
+
+.rate .texto p{
+	display: inline-block;
 }

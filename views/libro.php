@@ -177,6 +177,47 @@
 			<span>Fugiat nemo perspiciatis explicabo sapiente sunt officia et illum assumenda, dolorum nisi consequatur numquam quas beatae nihil omnis ea voluptatum iste quia, accusantium, debitis! Repudiandae omnis cum, quasi harum delectus.</span>
 			<span>Expedita, quod, eum. Officiis, quae consequuntur, fugiat repellat itaque, cum perspiciatis corporis quisquam ea possimus, voluptate libero. Pariatur asperiores, commodi harum molestias sit iusto est adipisci iure, temporibus quidem ducimus!</span>
 		</p>
+		<div class="rate">
+			<div class="comentarios">
+				<h2>Comentarios</h2>
+				<div class="foto">
+					<img src="imagenes/default.png">
+				</div>
+				<span class="nomUsuario">Nombre usuario</span>
+				<div class="texto">
+					<p>Iris por favor ponganos buena nota :'v no sea mala onda, hasta comentarios pusimos xd</p>
+				</div>
+				<hr>
+				<br>
+				<div class="foto">
+					<img src="imagenes/default.png">
+				</div>
+				<span class="nomUsuario">Nombre usuario</span>
+				<div class="texto">
+					<p>Iris por favor ponganos buena nota :'v no sea mala onda, hasta comentarios pusimos xd</p>
+				</div>
+				<hr>
+				<br>
+				<div class="foto">
+					<img src="imagenes/default.png">
+				</div>
+				<span class="nomUsuario">Nombre usuario</span>
+				<div class="texto">
+					<p>Iris por favor ponganos buena nota :'v no sea mala onda, hasta comentarios pusimos xd</p>
+				</div>
+				<hr>
+				<br>
+				<div class="foto">
+					<img src="imagenes/default.png">
+				</div>
+				<span class="nomUsuario">Nombre usuario</span>
+				<div class="texto">
+					<p>Iris por favor ponganos buena nota :'v no sea mala onda, hasta comentarios pusimos xd</p>
+				</div>
+				<hr>
+				<br>
+			</div>
+		</div>
 	</section>
 	<footer></footer>
 </body>
