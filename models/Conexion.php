@@ -46,7 +46,7 @@
 						$query = "INSERT INTO $tabla($keys_imploded) VALUES('$values_imploded')"; //Iniciando consula
 					} else {
 
-						$query = "INSERT INTO $tabla($keys_imploded) VALUES($values_imploded)"; //Iniciando consula
+						$query = "INSERT INTO $tabla($keys_imploded) VALUES('$values_imploded')"; //Iniciando consula
 					}
 
 					echo $query;

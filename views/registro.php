@@ -6,6 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="../views/css/registro.css">
 	<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/fuentes.css">
+	<?php if (isset($_GET['dateW'])): ?>
+		<link rel="stylesheet" type="text/css" href="../views/css/alerta_cumpleaños.css">
+	<?php endif ?>
 </head>
 <body>
 		<form action="../controllers/registroController.php" method="post" class="registro2">
@@ -25,7 +28,7 @@
 				<label for="usuario">
 					<h3>Escriba un nombre de Usuario:</h3>
 				</label>
-					<input type="text" class="inputRegistro" name="usuario" placeholder="Nombre de Usuario" id="usuario" required autocomplete="off">
+					<input type="text" class="inputRegistro" name="usuario" placeholder="Nombre de Usuario" id="usuario" autocomplete="off">
 			</div>
 			<div class="mitadDos">
 				<label for="contraseña">
@@ -42,8 +45,8 @@
 				<?php include("../views/fecha_de_nacimiento.html"); ?>
 				<br><br>
 				<div class="radio">
-					<input type="radio" name="genero" value="Hombre" id="hombre" class="inputHombre"><label for="hombre">Hombre</label>
-					<input type="radio" name="genero" value="Mujer" id="mujer" class="inputMujer"><label for="mujer">Mujer</label>
+					<input type="radio" name="genero" value="M" id="hombre" class="inputGenero"><label for="hombre">Hombre</label>
+					<input type="radio" name="genero" value="F" id="mujer" class="inputGenero" checked><label for="mujer">Mujer</label>
 				</div>
 			</div>
 			<br>

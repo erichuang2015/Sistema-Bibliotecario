@@ -52,7 +52,7 @@ h1{
 	padding: 5px;
 }
 
-.inputRegistro:focus {
+.inputRegistro:focus, select, option {
 	outline: none;
 }
 

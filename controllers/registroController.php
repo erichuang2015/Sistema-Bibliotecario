@@ -11,9 +11,13 @@
 	$diaCumple = $_POST["dia"];
 	$mesCumple = $_POST["mes"];
 	$anioCumple = $_POST["anio"];
-	$born = $diaCumple."".$mesCumple."".$anioCumple;
+	if (is_numeric($diaCumple) || is_numeric($mesCumple) || is_numeric($anioCumple)) {
+		
+		header("Location:../views/registro.php?dateW");
+	}
+	$born = $anioCumple.$mesCumple.$diaCumple;
 
-	$edad = date("Y") - $anioCumple;
+	$edad = intval(date("Y")) - $anioCumple;
 	$sexo = $_POST["genero"];
 
 	//Cifrando ontraseña
@@ -21,22 +25,13 @@
 
 	try {
 		
-		$valores = [":nombres, :apellidos, :apodo, :contra, :email, :nacimiento, :edad, :sexo"];
+		$valores = [":Id, :nombres, :apellidos, :apodo, :contra, :email, :nacimiento, :edad, :sexo"];
 
-		$marcadores = array(":nombres" => $nombres, ":apellidos" => $apellidos, ":apodo" => $nom_usuario, ":contra" => $p_cifrada, ":email" =>  $email, ":nacimiento" => $born, ":edad" => $edad, ":sexo" => $sexo);
+		$marcadores = array(":Id" => null, ":nombres" => $nombres, ":apellidos" => $apellidos, ":apodo" => $nom_usuario, ":contra" => $p_cifrada, ":email" =>  $email, ":nacimiento" => $born, ":edad" => intval($edad), ":sexo" => $sexo);
 
-		$arrayOptions = array(
-			PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,
-			PDO::ATTR_EMULATE_PREPARES=>FALSE,
-			PDO::MYSQL_ATTR_INIT_COMMAND=>"SET NAMES 'utf8'",
-			PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC
-		);
+		$conexion->InsertQuery("usuarios",$valores,null,$marcadores);
 
-		$conexion = new PDO("mysql:host=localhost;dbname=usuarios","root","", $arrayOptions);
-
-		$conexion->prepare($query);
-
-		header("location:../views/login.php");
+		header("Location:../views/login.php?registro");
 
 	} catch (PDOException $e) {
 		die();

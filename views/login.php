@@ -26,3 +26,16 @@
 	</div>	
 </body>
 </html>
+
+<?php 
+
+	if (isset($_GET['registro'])) { ?>
+		
+	<script type="text/javascript">
+		alert("Usuario ingresado correctamente");
+	</script>
+	
+	<?php
+	}
+
+ ?>
