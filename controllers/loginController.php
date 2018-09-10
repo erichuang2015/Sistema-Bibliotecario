@@ -29,7 +29,8 @@
 				setcookie("usuario", $_SESSION['nombres'],time()+604800);
 			}
 
-			header("Location: ../views/inicio.php");
+			header("Location: ../views/inicio1.php");
+			exit();
 
 		} catch (PDOException $e) {
 			
@@ -37,7 +38,7 @@
 		}
 	} else {
 
-		header("Location: ../views/login.php");
+		header("Location: ../views/login.php?errLogin");
 	}
 
  ?>

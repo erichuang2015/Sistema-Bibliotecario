@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="../views/css/registro.css">
 	<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/fuentes.css">
+	<link rel="stylesheet" type="text/css" href="css/hint.min.css">
 	<?php if (isset($_GET['dateW'])): ?>
 		<link rel="stylesheet" type="text/css" href="../views/css/alerta_cumpleaños.css">
 	<?php endif ?>
@@ -48,7 +49,13 @@
 					<input type="email" class="inputRegistro" name="correo" placeholder="Correo electrónico" id="correo" required autocomplete="off">
 				</label>
 				<br><br>
-				<?php include("../views/fecha_de_nacimiento.html"); ?>
+				<?php if (isset($_GET['dateW'])): ?>
+				<div class="hint--right hint--error hint--always" aria-label="Debes ingresar una fecha de cumpleaños válida">
+					<?php include("../views/fecha_de_nacimiento.html"); ?>
+				</div>
+				<?php else: ?>
+					<?php include("../views/fecha_de_nacimiento.html"); ?>
+				<?php endif ?>
 				<br><br>
 				<div class="radio">
 					<input type="radio" name="genero" value="M" id="hombre" class="inputGenero"><label for="hombre">Hombre</label>
