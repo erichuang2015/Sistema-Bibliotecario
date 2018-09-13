@@ -14,7 +14,7 @@
 			session_start();
 
 			//Recuperando toda la información principal del usuario que ha iniciado sesión.
-			$datos = $conexion->SelectQuery(['Nombres,Apellidos,Apodo,Email,FechaNacimiento,Edad,Sexo,Permisos'],"usuarios","Apodo",$usuario);
+			$datos = $conexion->SelectQuery(['Nombres,Apellidos,Apodo,Email,FechaNacimiento,Edad,Id_Sexo,Permisos'],"usuarios","Apodo",$usuario);
 
 			$_SESSION['nombres'] = $datos[0]['Nombres'];
 			$_SESSION['apellidos'] = $datos[0]['Apellidos'];

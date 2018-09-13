@@ -58,8 +58,8 @@
 				<?php endif ?>
 				<br><br>
 				<div class="radio">
-					<input type="radio" name="genero" value="M" id="hombre" class="inputGenero"><label for="hombre">Hombre</label>
-					<input type="radio" name="genero" value="F" id="mujer" class="inputGenero" checked><label for="mujer">Mujer</label>
+					<input type="radio" name="genero" value="11" id="hombre" class="inputGenero"><label for="hombre">Hombre</label>
+					<input type="radio" name="genero" value="12" id="mujer" class="inputGenero" checked><label for="mujer">Mujer</label>
 				</div>
 			</div>
 			<br>
