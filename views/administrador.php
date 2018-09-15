@@ -5,126 +5,35 @@
 	<meta charset="UTF-8">
 	<title>Administrador | Sistema bibliotecario</title>
 	<link rel="stylesheet" type="text/css" href="css/administrador.css">
+	<link rel="stylesheet" type="text/css" href="../views/css/aside.css">
+	<link rel="stylesheet" type="text/css" href="../views/css/nav.css">
+	<link rel="stylesheet" type="text/css" href="../views/css/searchbar.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
 	<header>
-		<h1>Categoría de libros</h1>
+		<?php include '../views/nav.php'; ?>
 	</header>
 	<section class="main">
-		<aside id="categorias">
-			<h2>Nombre Usuario</h2>
-			<br>
-			<hr class="hr">
-			<br>
-			<h3 align="center">Categorias</h3><br>
-			<span id="nomCat">Nombre categoria</span>
-			<a href="" id="down"><span class="fas fa-chevron-down"></span></a>
-			<ul id="libros">
-				<li class="">Libro 1</li>
-				<li class="">Libro 2</li>
-			</ul>
-			<br>
-			<span id="nomCat">Nombre categoria</span>
-			<a href="" id="down"><span class="fas fa-chevron-down"></span></a>
-			<ul id="libros">
-				<li class="">Libro 1</li>
-				<li class="">Libro 2</li>
-			</ul>
-			<br>
-			<span id="nomCat">Nombre categoria</span>
-			<a href="" id="down"><span class="fas fa-chevron-down"></span></a>
-			<ul id="libros">
-				<li class="">Libro 1</li>
-				<li class="">Libro 2</li>
-			</ul>
-			<br>
-			<span id="nomCat">Nombre categoria</span>
-			<a href="" id="down"><span class="fas fa-chevron-down"></span></a>
-			<ul id="libros">
-				<li class="">Libro 1</li>
-				<li class="">Libro 2</li>
-			</ul>
-			<br>
-			<span id="nomCat">Nombre categoria</span>
-			<a href="" id="down"><span class="fas fa-chevron-down"></span></a>
-			<ul id="libros">
-				<li class="">Libro 1</li>
-				<li class="">Libro 2</li>
-			</ul>
-			<br>
-			<span id="nomCat">Nombre categoria</span>
-			<a href="" id="down"><span class="fas fa-chevron-down"></span></a>
-			<ul id="libros">
-				<li class="">Libro 1</li>
-				<li class="">Libro 2</li>
-			</ul>
-			<br>
-			<span id="nomCat">Nombre categoria</span>
-			<a href="" id="down"><span class="fas fa-chevron-down"></span></a>
-			<ul id="libros">
-				<li class="">Libro 1</li>
-				<li class="">Libro 2</li>
-			</ul>
-			<br>
-		</aside>
+		<h1 id="cateLibrostxt">Categoría de libros</h1>
+		<?php include '../views/aside.php'; ?>
 		<div class="editarlibros">
-			<div class="img">
-				<img src="imagenes/libro-default.jpg">
+			<div class="libro">
+				<div class="img">
+					<img src="imagenes/libro-default.jpg">
+				</div>
+				<div id="infolibro">
+					<h2>Nombre del libro</h2>
+					<p>Descripcion del libro: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quasi odit tenetur ut, eum consequatur at recusandae qui quia. Illo repellat, reiciendis minima qui nesciunt quis ad iste nihil mollitia.</p>
+				</div>
+				<div class="botones">
+					<button id="editar">Editar</button>
+					<button id="borrar">Eliminar</button>
+				</div>
+				<br>
+				<hr>
+				<br>
 			</div>
-			<div id="infolibro">
-				<h2>Nombre del libro</h2>
-				<p>Descripcion del libro: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quasi odit tenetur ut, eum consequatur at recusandae qui quia. Illo repellat, reiciendis minima qui nesciunt quis ad iste nihil mollitia.</p>
-			</div>
-			<div class="botones">
-				<button id="editar">Editar</button>
-				<button id="borrar">Eliminar</button>
-			</div>
-			<br>
-			<hr>
-			<br>
-			<div class="img">
-				<img src="imagenes/libro-default.jpg">
-			</div>
-			<div id="infolibro">
-				<h2>Nombre del libro</h2>
-				<p>Descripcion del libro: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quasi odit tenetur ut, eum consequatur at recusandae qui quia. Illo repellat, reiciendis minima qui nesciunt quis ad iste nihil mollitia.</p>
-			</div>
-			<div class="botones">
-				<button id="editar">Editar</button>
-				<button id="borrar">Eliminar</button>
-			</div>
-			<br>
-			<hr>
-			<br>
-			<div class="img">
-				<img src="imagenes/libro-default.jpg">
-			</div>
-			<div id="infolibro">
-				<h2>Nombre del libro</h2>
-				<p>Descripcion del libro: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quasi odit tenetur ut, eum consequatur at recusandae qui quia. Illo repellat, reiciendis minima qui nesciunt quis ad iste nihil mollitia.</p>
-			</div>
-			<div class="botones">
-				<button id="editar">Editar</button>
-				<button id="borrar">Eliminar</button>
-			</div>
-			<br>
-			<hr>
-			<br>
-			<div class="img">
-				<img src="imagenes/libro-default.jpg">
-			</div>
-			<div id="infolibro">
-				<h2>Nombre del libro</h2>
-				<p>Descripcion del libro: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quasi odit tenetur ut, eum consequatur at recusandae qui quia. Illo repellat, reiciendis minima qui nesciunt quis ad iste nihil mollitia.</p>
-			</div>
-			<div class="botones">
-				<button id="editar">Editar</button>
-				<button id="borrar">Eliminar</button>
-			</div>
-			<br>
-			<hr>
-			<br>
 		</div>
 		<!--<div class="rate">
 			<div class="comentarios">

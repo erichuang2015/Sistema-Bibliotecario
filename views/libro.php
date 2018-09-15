@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Nombre del libro | Sistema bibliotecario </title>
+	<link rel="stylesheet" type="text/css" href="../views/css/searchbar.css">
 	<link rel="stylesheet" type="text/css" href="../views/css/libro.css">
 	<link rel="stylesheet" type="text/css" href="../views/css/aside.css">
 	<link rel="stylesheet" type="text/css" href="../views/css/searchbar.css">
@@ -14,7 +15,7 @@
 	<?php include("../views/nav.php"); ?>
 	</header>
 	<section class="main">
-		<h1>Nombre del libro</h1>
+		<h1 id="bookName">Nombre del libro</h1>
 		<?php include("../views/aside.php"); ?>
 		<p id="leerlibro">
 			<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quidem unde ea debitis obcaecati autem nostrum, officiis tenetur! Itaque, recusandae. Est sint velit corporis asperiores nemo ducimus maxime soluta praesentium!</span>

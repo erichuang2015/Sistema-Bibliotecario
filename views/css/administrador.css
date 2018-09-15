@@ -1,6 +1,6 @@
 * {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 
@@ -8,39 +8,13 @@ body {
 	font-family: Arial;
 }
 
-h1 {
+#cateLibrostxt {
 	display: inline-block;
 	margin-top: 10px;
 	position: absolute;
 	left: 35%;
 	font-size: 55px;
 }
-
-/* Categorias */
-#categorias {
-	padding: 10px 30px;
-	border-right: 1px inset #000000;
-	border-bottom: 1px inset #000000;
-	display: inline-block;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-}
-
-#down {
-	display: inline-block;
-	padding: 5px;
-}
-
-#libros li {
-	margin-left: 20px;
-}
-
-#down:active .nomCat {
-	display: none;
-}
-
-/* fin categorias*/
 
 /* Editar libros*/
 .editarlibros {
@@ -54,6 +28,7 @@ h1 {
 
 .editarlibros .img {
 	width: 150px;
+	height: auto;
 	display: inline-block;
 }
 
@@ -70,7 +45,7 @@ h1 {
 
 .botones {
 	margin-left: 25px;
-	margin-top: 10px;
+	margin-top: 35px;
 }
 
 .botones button {
