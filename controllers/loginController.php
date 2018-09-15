@@ -26,7 +26,7 @@
 			$_SESSION['permisos'] = $datos[0]['Permisos'];
 
 			if ($recordar == "on") {
-				setcookie("usuario", $_SESSION['nombres'],time()+604800);
+				setcookie("usuario", $_SESSION['nombres'],time()+604800, "/", "localhost");
 			}
 
 			header("Location: ../views/inicio1.php");

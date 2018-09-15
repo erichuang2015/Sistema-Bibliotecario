@@ -3,78 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Nombre del libro | Sistema bibliotecario </title>
-	<link rel="stylesheet" type="text/css" href="css/libro.css">
+	<link rel="stylesheet" type="text/css" href="../views/css/libro.css">
+	<link rel="stylesheet" type="text/css" href="../views/css/aside.css">
+	<link rel="stylesheet" type="text/css" href="../views/css/searchbar.css">
+	<link rel="stylesheet" type="text/css" href="../views/css/nav.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
 	<header>
-		<h1>Nombre del libro</h1>
-		<div class="searchbar">
-			<form action="" method="get">
-				<button type="submit" name="buscar" id="search">
-					<li class="fas fa-search"></li>
-				</button>
-				<input type="text" name="busqueda" id="bar" placeholder="Busca un libro..." autocomplete="off">
-			</form>
-		</div>
+	<?php include("../views/nav.php"); ?>
 	</header>
 	<section class="main">
-		<aside id="categorias">
-			<h2>Administrador</h2>
-			<br>
-			<hr class="hr">
-			<br>
-			<h3 align="center">Categorias</h3><br>
-			<span id="nomCat">Nombre categoria</span>
-			<a href="" id="down"><span class="fas fa-chevron-down"></span></a>
-			<ul id="libros">
-				<li class="">Libro 1</li>
-				<li class="">Libro 2</li>
-			</ul>
-			<br>
-			<span id="nomCat">Nombre categoria</span>
-			<a href="" id="down"><span class="fas fa-chevron-down"></span></a>
-			<ul id="libros">
-				<li class="">Libro 1</li>
-				<li class="">Libro 2</li>
-			</ul>
-			<br>
-			<span id="nomCat">Nombre categoria</span>
-			<a href="" id="down"><span class="fas fa-chevron-down"></span></a>
-			<ul id="libros">
-				<li class="">Libro 1</li>
-				<li class="">Libro 2</li>
-			</ul>
-			<br>
-			<span id="nomCat">Nombre categoria</span>
-			<a href="" id="down"><span class="fas fa-chevron-down"></span></a>
-			<ul id="libros">
-				<li class="">Libro 1</li>
-				<li class="">Libro 2</li>
-			</ul>
-			<br>
-			<span id="nomCat">Nombre categoria</span>
-			<a href="" id="down"><span class="fas fa-chevron-down"></span></a>
-			<ul id="libros">
-				<li class="">Libro 1</li>
-				<li class="">Libro 2</li>
-			</ul>
-			<br>
-			<span id="nomCat">Nombre categoria</span>
-			<a href="" id="down"><span class="fas fa-chevron-down"></span></a>
-			<ul id="libros">
-				<li class="">Libro 1</li>
-				<li class="">Libro 2</li>
-			</ul>
-			<br>
-			<span id="nomCat">Nombre categoria</span>
-			<a href="" id="down"><span class="fas fa-chevron-down"></span></a>
-			<ul id="libros">
-				<li class="">Libro 1</li>
-				<li class="">Libro 2</li>
-			</ul>
-			<br>
-		</aside>
+		<h1>Nombre del libro</h1>
+		<?php include("../views/aside.php"); ?>
 		<p id="leerlibro">
 			<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quidem unde ea debitis obcaecati autem nostrum, officiis tenetur! Itaque, recusandae. Est sint velit corporis asperiores nemo ducimus maxime soluta praesentium!</span>
 			<span>Repudiandae aliquid maiores modi ducimus, corporis fugit debitis perspiciatis rerum blanditiis dolorem porro omnis dolor commodi architecto quod delectus nisi! Mollitia optio eum, magnam. Molestiae, doloremque fuga harum. Sit, quos.</span>

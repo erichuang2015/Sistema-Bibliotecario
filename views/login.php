@@ -9,9 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="../views/css/animate.css">
 </head>
 <body>
-	
 	<div class="login">
-		<form action="../controllers/loginController.php" method="post" class="login2"  >
+		<form action="../controllers/loginController.php" method="post" class="login2">
 			<h1>Iniciar Sesión</h1>
 			<br>
 			<label for="usuario"><p><b>Nombre de Usuario</b></p>
@@ -21,9 +20,8 @@
 				<input type="text" class="inputLogin animated shake" name="usuario" placeholder= "Usuario" id="usuario" required autocomplete="off" title="Ingresa tu correo electrónico">
 			</div>
 			<?php else: ?>
-				<input type="text" class="inputLogin" name="usuario" placeholder= "Usuario" id="usuario" required autocomplete="off" title="Ingresa tu correo electrónico">
+				<input type="text" class="inputLogin" name="usuario" placeholder="Usuario" id="usuario" required autocomplete="off" title="Ingresa tu correo electrónico" autofocus>
 			<?php endif ?>
-						
 			<label for="contrasenia"> <p><b>Contraseña</b></p>
 			<input type="password" class="inputLogin" name="contrasenia" placeholder="Contraseña" id="contrasenia" required autocomplete="off">
 			</label>
@@ -36,7 +34,6 @@
 	</div>	
 </body>
 </html>
-
 <?php 
 
 	if (isset($_GET['registro'])) { ?>

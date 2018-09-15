@@ -6,6 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="../views/css/Inicio1.css">
 	<link rel="stylesheet" type="text/css" href="../views/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../views/css/fuentes.css">
+	<link rel="stylesheet" type="text/css" href="../views/css/aside.css">
+	<link rel="stylesheet" type="text/css" href="../views/css/searchbar.css">
+	<link rel="stylesheet" type="text/css" href="../views/css/nav.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
@@ -23,32 +26,7 @@
 			</form>
 	</div>
 	<section>
-		<aside id="categorias">
-			<h3 align="center">Categorias</h3><br>
-			<span id="nomCat">Nombre categoria</span>
-			<i class="fas fa-angle-double-right"></i>
-			<br>
-			<br>
-			<span id="nomCat">Nombre categoria</span>
-			<i class="fas fa-angle-double-right"></i>
-			<br>
-			<br>
-			<span id="nomCat">Nombre categoria</span>
-			<i class="fas fa-angle-double-right"></i>
-			<br>
-			<br>
-			<span id="nomCat">Nombre categoria</span>
-			<i class="fas fa-angle-double-right"></i>
-			<br>
-			<br>
-			<span id="nomCat">Nombre categoria</span>
-			<i class="fas fa-angle-double-right"></i>
-			<br>
-			<br>
-			<span id="nomCat">Nombre categoria</span>
-			<i class="fas fa-angle-double-right"></i>
-			<br>
-		</aside>
+		<?php include("../views/aside.php"); ?>
 	</section>
 	<div class="letra"><h2>Nombre de categoria</h2></div>
 	<div class="fila">

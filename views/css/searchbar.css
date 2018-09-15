@@ -1,0 +1,50 @@
+a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+.searchbar {
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	margin: 3px 200px;
+}
+
+.searchbar #search {
+	position: absolute;
+	left: 5px;
+	top:3px;
+	height: 46px;
+	border-width: 0px;
+	border-top: 1px inset grey;
+	border-left: 1px inset grey;
+	border-bottom: 1px inset grey;
+	border-radius: 5px 0px 0px 5px;
+	padding: 6px;
+	background-color: #ffffff;
+}
+
+.searchbar #search:focus {
+	outline: none;
+}
+
+.searchbar #search li {
+	margin: 5px;
+}
+
+.searchbar #bar {
+	margin-left: 44px;
+	margin-top: 3px;
+	border-top: 1px inset grey;
+	border-bottom: 1px inset grey;
+	border-right: 1px inset grey;
+	border-left: none;
+	border-radius: 0px 5px 5px 0px;
+	padding: 10px;
+	width: 80%;
+
+}
+
+.searchbar #bar:focus {
+	outline: none;
+}
