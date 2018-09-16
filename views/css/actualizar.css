@@ -1,0 +1,42 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#titulo {
+	position: relative;
+	left: 25%;
+	top: 25px;
+	display: inline-block;
+	font-size: 60px;	
+}
+
+.hr {
+	color: red;
+	width: 700px;
+	margin: 10px auto;
+	background-color: red;
+}
+
+.camposActualizar {
+	position: relative;
+	left: 24%;
+	top: 50px;
+	margin-bottom: 20px;
+}
+
+input.camposActualizar, textarea {
+	padding: 10px 20px;
+	font-size: 25px;
+	vertical-align: center;
+}
+
+#descripcion {
+	resize: horizontal;
+}
+
+label.camposActualizar {
+	margin: 10px;
+	font-size: 45px;
+}

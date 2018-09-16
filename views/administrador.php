@@ -48,47 +48,6 @@
 			</div>
 			<?php endforeach ?>
 		</div>
-		<!--<div class="rate">
-			<div class="comentarios">
-				<h2>Comentarios</h2>
-				<div class="foto">
-					<img src="imagenes/default.png">
-				</div>
-				<span class="nomUsuario">Nombre usuario</span>
-				<div class="texto">
-					<p>Iris por favor ponganos buena nota :'v no sea mala onda, hasta comentarios pusimos xd</p>
-				</div>
-				<hr>
-				<br>
-				<div class="foto">
-					<img src="imagenes/default.png">
-				</div>
-				<span class="nomUsuario">Nombre usuario</span>
-				<div class="texto">
-					<p>Iris por favor ponganos buena nota :'v no sea mala onda, hasta comentarios pusimos xd</p>
-				</div>
-				<hr>
-				<br>
-				<div class="foto">
-					<img src="imagenes/default.png">
-				</div>
-				<span class="nomUsuario">Nombre usuario</span>
-				<div class="texto">
-					<p>Iris por favor ponganos buena nota :'v no sea mala onda, hasta comentarios pusimos xd</p>
-				</div>
-				<hr>
-				<br>
-				<div class="foto">
-					<img src="imagenes/default.png">
-				</div>
-				<span class="nomUsuario">Nombre usuario</span>
-				<div class="texto">
-					<p>Iris por favor ponganos buena nota :'v no sea mala onda, hasta comentarios pusimos xd</p>
-				</div>
-				<hr>
-				<br>
-			</div>
-		</div>-->
 	</section>
 	<footer>
 		
