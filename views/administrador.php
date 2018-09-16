@@ -39,7 +39,7 @@
 					<p><?php echo $datoLibro['Descripcion'] ?></p>
 				</div>
 				<div class="botones">
-					<a href="../views/editar.php?id=<?php echo $datoLibro['Id_Libro']; ?>"><button id="editar">Editar</button></a>
+					<a href="../views/actualizar.php?id=<?php echo $datoLibro['Id_Libro']; ?>"><button id="editar">Editar</button></a>
 					<button id="borrar">Eliminar</button>
 				</div>
 				<br>
