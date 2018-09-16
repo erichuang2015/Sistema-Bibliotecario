@@ -5,6 +5,7 @@
 	<title>Nombre del libro | Sistema bibliotecario </title>
 	<link rel="stylesheet" type="text/css" href="../views/css/searchbar.css">
 	<link rel="stylesheet" type="text/css" href="../views/css/libro.css">
+	<link rel="stylesheet" type="text/css" href="../views/css/fuentes.css">
 	<link rel="stylesheet" type="text/css" href="../views/css/aside.css">
 	<link rel="stylesheet" type="text/css" href="../views/css/searchbar.css">
 	<link rel="stylesheet" type="text/css" href="../views/css/nav.css">
