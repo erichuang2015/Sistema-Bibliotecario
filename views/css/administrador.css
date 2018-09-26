@@ -12,11 +12,15 @@ body {
 	display: inline-block;
 	margin-top: 10px;
 	position: absolute;
-	left: 35%;
-	font-size: 55px;
+	left: 30%;
+	font-size: 70px;
+	font-family: 'Lobster', cursive;
 }
 
 /* Editar libros*/
+.nombrelibro{
+	font-family: 'Arvo', serif;
+}
 .editarlibros {
 	text-align: justify;
 	display: inline-block;
@@ -59,15 +63,36 @@ body {
 .botones #editar {
 	background-color: orange;
 	border-bottom: 5px solid #C36D0B;
+	font-family: 'Nokora', serif;
+	font-size: 20px;
 }
 
 .botones #borrar {
 	background-color: red;
 	border-bottom: 5px solid #B80707;
+	font-family: 'Nokora', serif;
+	font-size: 20px;
 }
 
 .botones #editar:focus, #borrar:focus {
 	outline: 0px;
 	border-bottom: 0px;
 	padding: 15px;
+}
+
+.agregar{
+	position: absolute;
+	right: 25px;
+	top: 85px;
+	background-color: #973E2B;
+	border-radius: 5px;
+	border: none;
+	height: 30px;
+	width: 18%;
+	color: #ffffff;
+	font-family: 'Chicle', cursive;
+
+}
+.descripcion{
+	font-family: 'Abel', sans-serif;
 }

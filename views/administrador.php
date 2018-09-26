@@ -24,7 +24,7 @@
 	</header>
 	<section class="main">
 		<h1 id="cateLibrostxt">Categoría de libros</h1>
-		<button>En este botón va a ir "Agregar nuevo libro"</button>
+		<button class="agregar">En este botón va a ir "Agregar nuevo libro"</button>
 		<?php include '../views/aside.php'; ?>
 		<div class="editarlibros">
 			<?php foreach ($datos as $datoLibro): ?>
@@ -33,8 +33,8 @@
 					<img src="imagenes/libro-default.jpg">
 				</div>
 				<div id="infolibro">
-					<h2><?php echo $datoLibro['Nombre'] ?></h2>
-					<p><?php echo $datoLibro['Descripcion'] ?></p>
+					<h2 class="nombrelibro"><?php echo $datoLibro['Nombre'] ?></h2>
+					<p class="descripcion"><?php echo $datoLibro['Descripcion'] ?></p>
 				</div>
 				<div class="botones">
 					<a href="../views/actualizar.php?id=<?php echo $datoLibro['Id_Libro']; ?>"><button id="editar">Editar</button></a>
