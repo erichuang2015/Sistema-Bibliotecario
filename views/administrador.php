@@ -24,9 +24,7 @@
 	</header>
 	<section class="main">
 		<h1 id="cateLibrostxt">Categoría de libros</h1>
-		<?php if ($_SESSION['permisos'] == "administrador"): ?>
-			<button>En este botón va a ir "Agregar nuevo libro"</button>
-		<?php endif ?>
+		<button>En este botón va a ir "Agregar nuevo libro"</button>
 		<?php include '../views/aside.php'; ?>
 		<div class="editarlibros">
 			<?php foreach ($datos as $datoLibro): ?>
