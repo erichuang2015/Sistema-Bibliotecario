@@ -24,7 +24,7 @@
 	</header>
 	<section class="main">
 		<h1 id="cateLibrostxt">Categoría de libros</h1>
-		<button class="agregar">En este botón va a ir "Agregar nuevo libro"</button>
+		<a href="add.php"><button class="agregar">Agregar libro</button></a>
 		<?php include '../views/aside.php'; ?>
 		<div class="editarlibros">
 			<?php foreach ($datos as $datoLibro): ?>
