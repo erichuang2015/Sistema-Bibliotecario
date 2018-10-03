@@ -31,10 +31,11 @@
 		<h1 id="titulo">Actualizar datos de libros</h1>
 		<br><br>
 		<hr class="hr"><hr class="hr">
-		<form>
+		<form action="../controllers/actualizarController.php" method="post">
 			<label for="nombre" class="camposActualizar">Nombre: </label>
 			<input type="text" name="nombre" class="camposActualizar" id="nombre" value="<?php echo $datos[0]["Nombre"] ?>" placeholder="Nombre" autocomplete="off0".
 			>
+			<input type="hidden" name="nombreAnterior" id="nombreAnterior" value="<?php echo $datos[0]["Nombre"] ?>">
 			<br>
 			<label for="descripcion" class="camposActualizar">Descripción: </label>
 			<br>
