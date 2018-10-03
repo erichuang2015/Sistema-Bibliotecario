@@ -6,7 +6,7 @@
 
 #titulo {
 	position: relative;
-	left: 25%;
+	left: 22%;
 	top: 25px;
 	display: inline-block;
 	font-size: 60px;	
@@ -15,7 +15,7 @@
 
 .hr {
 	color: red;
-	width: 700px;
+	width: 800px;
 	margin: 10px auto;
 	background-color: red;
 }
@@ -25,6 +25,7 @@
 	left: 24%;
 	top: 50px;
 	margin-bottom: 20px;
+	font-family: 'Nokora', serif;
 }
 
 input.camposActualizar, textarea {
@@ -40,4 +41,21 @@ input.camposActualizar, textarea {
 label.camposActualizar {
 	margin: 10px;
 	font-size: 45px;
+}
+
+#actualizarBtn{
+	font-family: 'Lobster', cursive;
+	background-color: rgba(238, 143, 123, 0.5);
+}
+
+#actualizarBtn:focus{
+	outline-color: #ffffff;
+}
+
+#descripcion{
+	font-family: 'Abel', sans-serif;
+}
+
+#nombre{
+	font-family: 'Arvo', serif;
 }
