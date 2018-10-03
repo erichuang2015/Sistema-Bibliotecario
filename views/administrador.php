@@ -35,7 +35,9 @@
 				<div id="infolibro">
 					<h2 class="nombrelibro"><?php echo $datoLibro['Nombre'] ?></h2>
 					<p class="descripcion"><?php echo $datoLibro['Descripcion'] ?></p>
+					<span id="existencia">En existencia: <?php echo $datoLibro['Existencia'] ?></span>
 				</div>
+				<br>
 				<div class="botones">
 					<a href="../views/actualizar.php?id=<?php echo $datoLibro['Id_Libro']; ?>"><button id="editar">Editar</button></a>
 					<button id="borrar">Eliminar</button>

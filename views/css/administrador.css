@@ -50,6 +50,8 @@ body {
 .botones {
 	margin-left: 25px;
 	margin-top: 35px;
+	display: block;
+	position: relative;
 }
 
 .botones button {
@@ -95,4 +97,13 @@ body {
 }
 .descripcion{
 	font-family: 'Abel', sans-serif;
+}
+
+#infolibro {
+	display: block;
+}
+
+#existencia {
+	position: relative;
+	display: block;
 }
