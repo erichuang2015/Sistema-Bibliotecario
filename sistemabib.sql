@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-09-2018 a las 05:26:13
--- Versión del servidor: 10.1.31-MariaDB
--- Versión de PHP: 7.2.3
+-- Tiempo de generación: 03-10-2018 a las 22:21:12
+-- Versión del servidor: 10.1.36-MariaDB
+-- Versión de PHP: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -91,6 +91,7 @@ CREATE TABLE `libros` (
   `Id_Libro` int(3) NOT NULL,
   `Nombre` varchar(255) NOT NULL,
   `Descripcion` varchar(1000) NOT NULL,
+  `Existencia` int(2) NOT NULL,
   `Puntuacion` int(3) NOT NULL,
   `Id_Autor` int(3) NOT NULL DEFAULT '0',
   `Id_Editorial` int(3) NOT NULL DEFAULT '0'
@@ -100,9 +101,9 @@ CREATE TABLE `libros` (
 -- Volcado de datos para la tabla `libros`
 --
 
-INSERT INTO `libros` (`Id_Libro`, `Nombre`, `Descripcion`, `Puntuacion`, `Id_Autor`, `Id_Editorial`) VALUES
-(0, 'Los juegos del hambre', 'Esta es una descripción de ejemplo, solo para hacer pruebas en la página', 3, 1, 1),
-(1, 'Divergente', 'Esta es una descripción un poquito más larga porque quiero ver como se ve el montón de texto en el div de la descripción de los libros en la página administrador del sistema bibliotecario de la tarea de php del programa Oportunidades Fundación Gloria de Kriete', 3, 1, 1);
+INSERT INTO `libros` (`Id_Libro`, `Nombre`, `Descripcion`, `Existencia`, `Puntuacion`, `Id_Autor`, `Id_Editorial`) VALUES
+(0, 'Los juegos del hambre', 'Esta es una descripción de ejemplo, solo para hacer pruebas en la página', 10, 3, 1, 1),
+(1, 'Divergente', 'Esta es una descripción un poquito más larga porque quiero ver como se ve el montón de texto en el div de la descripción de los libros en la página administrador del sistema bibliotecario de la tarea de php del programa Oportunidades Fundación Gloria de Kriete', 0, 3, 1, 1);
 
 -- --------------------------------------------------------
 
