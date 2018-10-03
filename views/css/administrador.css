@@ -92,7 +92,7 @@ body {
 	height: 30px;
 	width: 18%;
 	color: #ffffff;
-	font-family: 'Chicle', cursive;
+	font-family: 'Nokora', serif;
 
 }
 .descripcion{
@@ -106,4 +106,6 @@ body {
 #existencia {
 	position: relative;
 	display: block;
+	left: 100px;
+
 }
