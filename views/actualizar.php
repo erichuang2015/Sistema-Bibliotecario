@@ -40,8 +40,10 @@
 			<br>
 			<textarea name="descripcion" class="camposActualizar" id="descripcion" rows="4" cols="50"><?php echo $datos[0]["Descripcion"];?></textarea>
 			<br>
-			<label for="" class="camposActualizar">En existencia: </label>
-			<input type="number" name="existencia" class="camposActualizar">
+			<label for="existencia" class="camposActualizar">En existencia: </label>
+			<input type="number" name="existencia" id="existencia" class="camposActualizar">
+			<br>
+			<input type="submit" class="camposActualizar" id="actualizarBtn" value="Actualizar">
 		</form>
 	</section>
 	<footer></footer>
