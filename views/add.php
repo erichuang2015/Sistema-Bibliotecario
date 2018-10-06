@@ -21,26 +21,33 @@
 		<?php include_once("../views/nav.php") ?>
 	</header>
 	<section class="main">
-		<form action="" method="post">
-			<input type="text">
-			<input type="text">
-			<input type="number" value="0">
+		<form action="../controllers/addController.php" method="post">
+			<label for="nombre">Nombre</label>
+			<input type="text" id="nombre">
+			<label for="descripcion">Descripción</label>
+			<textarea id="descripcion"></textarea>
+			<label for="existencia">Libros disponibles</label>
+			<input type="number" value="0" id="existencia">
 			<select name="autores" id="autores">
+				<option>Autores</option>
 			<?php 
 
-				$autores = $conexion->execQuery("SELECT Nombres, Id_Autor FROM autores INNER JOIN libros ON autores.Id_Autor = libros.Id_Autor");
+				$autores = $conexion->SelectQuery(null,"autores");
 
-				for ($i=0; $i < $autores.length; $i++): ?>
-					
-					<option value="<?php echo $autores[$i]["Id_Autor"] ?>"><?php echo $autores[$i]["Nombres"]; ?></option>
-
-				<?php endfor;
+				foreach ($autores as $autor): ?>
+					<option value="<?php echo $autor['Id_Autor'] ?>"><?php echo $autor['Nombres']; ?></option>
+				<?php endforeach;
 			 ?>
 			</select>
-			<select name="" id="">
+			<select name="categoria" id="categoria">
+				<option>Categoría</option>
 			<?php 
-			
 
+				$categorias = $conexion->SelectQuery(null,"categorias");
+
+				foreach ($categorias as $categoria): ?>
+					<option value="<?php echo $categoria['Id_Autor'] ?>"><?php echo $categoria['Nombres']; ?></option>
+				<?php endforeach;
 			 ?>
 			</select>
 		</form>
