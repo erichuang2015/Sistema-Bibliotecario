@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#h1 {
+	width: 800px;
+	position: relative;
+	right: 0px; left: 0px;
+	margin: auto;
+	font-size: 60px;
+	color: red;
+}
+
+#h2 {
+	width: 600px;
+	margin: auto;
+	font-size: 55px;
+}
+
+#img {
+	margin-top: 40px;
+	width: 300px;
+	position: absolute;
+	left: 27%;
+}
+
+#button {
+	position: absolute;
+	left: 57%;
+	top: 50vh;
+}
+
+#button:hover button {
+	cursor: pointer;
+}
+
+#button button {
+	background-color: red;
+	color: #fff;
+	border: none;
+	padding: 15px;
+	font-size: 35px;
+	width: 200px;
+	outline: none;
+}
