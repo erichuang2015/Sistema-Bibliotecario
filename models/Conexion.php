@@ -13,11 +13,11 @@
 			}
 		}
 
-		//Métodos de consulta que devuelven arrays
+		//Permite insertar una consulta básica sql en la base de datos
 		public function InsertQuery(string $tabla, array $valores, array $columnas = null, array $marcadores = null)
 		{
-			if ($columnas == null) {
-				try {
+			try {
+				if ($columnas == null) {
 
 					//Convirtiendo los array a strings para que el query pueda ejecutarse
 					$values_imploded = implode("','",$valores);
@@ -28,33 +28,19 @@
 
 						$query = "INSERT INTO $tabla VALUES($values_imploded)";
 					}
-
-					$this->execQuery($query, $marcadores);
-				} catch (PDOException $e) {
-					
-					die("Error " . $e->getMessage() . "en la línea " . $e->getLine());
-				} 
-			} else {
-				try {
+				} else {
 
 					//Convirtiendo los array a strings para que el query pueda ejecutarse
 					$keys_imploded = implode($columnas);
 					$values_imploded = implode("','",$valores);
 
-					if ($marcadores == null) {
-						
-						$query = "INSERT INTO $tabla($keys_imploded) VALUES('$values_imploded')"; //Iniciando consula
-					} else {
-
-						$query = "INSERT INTO $tabla($keys_imploded) VALUES('$values_imploded')"; //Iniciando consula
-					}
-
-					echo $query;
-					$this->execQuery($query, $marcadores);
-				} catch (PDOException $e) {
-					
-					die("Error " . getMessage() . "en la línea " . $e->getLine());
+					$query = "INSERT INTO $tabla($keys_imploded) VALUES('$values_imploded')";
 				}
+
+				$this->execQuery($query, $marcadores);
+			} catch (PDOException $e) {
+				
+				die("Error ". $e->getMessage() . "en la línea " . $e->getLine());
 			}
 		}
 

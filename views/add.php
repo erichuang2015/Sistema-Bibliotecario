@@ -13,7 +13,6 @@
 	<link rel="stylesheet" type="text/css" href="../views/css/fuentes.css">
 	<link rel="stylesheet" type="text/css" href="../views/css/nav.css">
 	<link rel="stylesheet" type="text/css" href="../views/css/searchbar.css">
-	<link rel="stylesheet" type="text/css" href="../views/css/actualizar.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
@@ -21,14 +20,18 @@
 		<?php include_once("../views/nav.php") ?>
 	</header>
 	<section class="main">
+		<h1>Añadir un libro</h1>
 		<form action="../controllers/addController.php" method="post">
 			<label for="nombre">Nombre</label>
-			<input type="text" id="nombre">
+			<input type="text" id="nombre" name="nombre">
+			<br>
 			<label for="descripcion">Descripción</label>
-			<textarea id="descripcion"></textarea>
+			<textarea id="descripcion" name="descripcion"></textarea>
+			<br>
 			<label for="existencia">Libros disponibles</label>
-			<input type="number" value="0" id="existencia">
-			<select name="autores" id="autores">
+			<input type="number" value="0" id="existencia" name="existencia">
+			<br>
+			<select name="autores" id="autores" name="autores">
 				<option>Autores</option>
 			<?php 
 
@@ -39,17 +42,19 @@
 				<?php endforeach;
 			 ?>
 			</select>
-			<select name="categoria" id="categoria">
+			<select name="categoria" id="categoria" name="categoria" ">
 				<option>Categoría</option>
 			<?php 
 
 				$categorias = $conexion->SelectQuery(null,"categorias");
 
 				foreach ($categorias as $categoria): ?>
-					<option value="<?php echo $categoria['Id_Autor'] ?>"><?php echo $categoria['Nombres']; ?></option>
+					<option value="<?php echo $categoria['Id_Categoria'] ?>"><?php echo $categoria['Nombre']; ?></option>
 				<?php endforeach;
 			 ?>
 			</select>
+			<br>
+			<input type="submit" value="Añadir libro">
 		</form>
 	</section>
 	<footer></footer>
