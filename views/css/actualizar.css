@@ -56,17 +56,10 @@ label.camposActualizar {
 	font-family: 'Arvo', serif;
 }
 
-.imagen {
-	position: relative;
-	left: 24%;
-	top: 30px;
-	padding: 20px;
-}
-
-input.imagen {
+#imagen {
 	border: 1px solid #000;
 }
 
-label.imagen {
+#imagenLabel {
 	font-size: 54px;
 }

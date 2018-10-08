@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-10-2018 a las 22:21:12
--- Versión del servidor: 10.1.36-MariaDB
--- Versión de PHP: 7.2.10
+-- Tiempo de generación: 09-10-2018 a las 01:26:36
+-- Versión del servidor: 10.1.31-MariaDB
+-- Versión de PHP: 7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -52,6 +52,13 @@ CREATE TABLE `categorias` (
   `Nombre` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `categorias`
+--
+
+INSERT INTO `categorias` (`Id_Categoria`, `Nombre`) VALUES
+(1, 'Terror');
+
 -- --------------------------------------------------------
 
 --
@@ -73,37 +80,19 @@ INSERT INTO `editoriales` (`Id_Editorial`, `Nombre`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `libro-categoria`
---
-
-CREATE TABLE `libro-categoria` (
-  `Id_Libro` int(11) NOT NULL,
-  `Id_Categoria` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `libros`
 --
 
 CREATE TABLE `libros` (
   `Id_Libro` int(3) NOT NULL,
   `Nombre` varchar(255) NOT NULL,
-  `Descripcion` varchar(1000) NOT NULL,
+  `Descripcion` varchar(10000) NOT NULL,
   `Existencia` int(2) NOT NULL,
   `Puntuacion` int(3) NOT NULL,
   `Id_Autor` int(3) NOT NULL DEFAULT '0',
-  `Id_Editorial` int(3) NOT NULL DEFAULT '0'
+  `Id_Editorial` int(3) NOT NULL DEFAULT '0',
+  `Imagen` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `libros`
---
-
-INSERT INTO `libros` (`Id_Libro`, `Nombre`, `Descripcion`, `Existencia`, `Puntuacion`, `Id_Autor`, `Id_Editorial`) VALUES
-(0, 'Los juegos del hambre', 'Esta es una descripción de ejemplo, solo para hacer pruebas en la página', 10, 3, 1, 1),
-(1, 'Divergente', 'Esta es una descripción un poquito más larga porque quiero ver como se ve el montón de texto en el div de la descripción de los libros en la página administrador del sistema bibliotecario de la tarea de php del programa Oportunidades Fundación Gloria de Kriete', 0, 3, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -173,13 +162,6 @@ ALTER TABLE `editoriales`
   ADD PRIMARY KEY (`Id_Editorial`);
 
 --
--- Indices de la tabla `libro-categoria`
---
-ALTER TABLE `libro-categoria`
-  ADD KEY `Id_Libro` (`Id_Libro`),
-  ADD KEY `Id_Categoria` (`Id_Categoria`);
-
---
 -- Indices de la tabla `libros`
 --
 ALTER TABLE `libros`
@@ -217,6 +199,12 @@ ALTER TABLE `editoriales`
   MODIFY `Id_Editorial` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT de la tabla `libros`
+--
+ALTER TABLE `libros`
+  MODIFY `Id_Libro` int(3) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
@@ -225,13 +213,6 @@ ALTER TABLE `usuarios`
 --
 -- Restricciones para tablas volcadas
 --
-
---
--- Filtros para la tabla `libro-categoria`
---
-ALTER TABLE `libro-categoria`
-  ADD CONSTRAINT `libro-categoria_ibfk_1` FOREIGN KEY (`Id_Libro`) REFERENCES `libros` (`Id_Libro`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `libro-categoria_ibfk_2` FOREIGN KEY (`Id_Categoria`) REFERENCES `categorias` (`Id_Categoria`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `libros`

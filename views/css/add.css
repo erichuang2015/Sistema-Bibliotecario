@@ -1,0 +1,52 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#titulo {
+	position: relative;
+	left: 22%;
+	top: 25px;
+	display: inline-block;
+	font-size: 60px;	
+	font-family: 'Mali', cursive;
+}
+
+.camposAdd {
+	position: relative;
+	left: 24%;
+	top: 50px;
+	margin-bottom: 20px;
+	font-family: 'Nokora', serif;
+}
+
+label.camposAdd {
+	font-size: 35px;
+	font-family: sans-serif;
+}
+
+select.camposAdd {
+	font-size: 25px;
+	font-family: sans-serif;
+}
+
+input.camposAdd, textarea {
+	padding: 15px;
+	font-size: 20px;
+}
+
+/* Personales por etiqueta */
+#imagen {
+	border: 1px solid #000;
+}
+
+#aniadirBtn {
+	font-family: 'Lobster', cursive;
+	background-color: rgba(238, 143, 123, 0.5);
+	font-size: 25px;
+}
+
+#aniadirBtn:focus {
+	outline-color: #ffffff;
+}

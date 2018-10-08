@@ -44,8 +44,8 @@
 			<label for="existencia" class="camposActualizar">En existencia: </label>
 			<input type="number" name="existencia" id="existencia" class="camposActualizar" value="<?php echo $datos[0]['Existencia'] ?>">
 			<br>
-			<label for="imagen" class="imagen">Foto</label>
-			<input type="file" name="imagen" class="imagen">
+			<label for="imagen" id="imagenLabel" class="camposActualizar">Foto</label>
+			<input type="file" name="imagen" id="imagen" class="camposActualizar">
 			<br>
 			<input type="submit" class="camposActualizar" id="actualizarBtn" value="Actualizar">
 		</form>
