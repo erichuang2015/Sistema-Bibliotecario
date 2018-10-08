@@ -21,7 +21,7 @@
 
 #img {
 	margin-top: 40px;
-	width: 300px;
+	width: 200px;
 	position: absolute;
 	left: 27%;
 }
@@ -44,4 +44,6 @@
 	font-size: 35px;
 	width: 200px;
 	outline: none;
+	position: relative;
+	left: -100px;
 }

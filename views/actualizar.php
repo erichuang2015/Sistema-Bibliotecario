@@ -31,18 +31,21 @@
 		<h1 id="titulo">Actualizar datos de libros</h1>
 		<br><br>
 		<hr class="hr"><hr class="hr">
-		<form action="../controllers/actualizarController.php" method="post">
-			<label for="nombre" class="camposActualizar">Nombre: </label>
-			<input type="text" name="nombre" class="camposActualizar" id="nombre" value="<?php echo $datos[0]["Nombre"] ?>" placeholder="Nombre" autocomplete="off0".
+		<form action="../controllers/actualizarController.php" method="post" enctype="multipart/form-data">
+			<input type="hidden" name="id" value="<?php echo $_GET['id'] ?>">
+			<label for="nombre" class="camposActualizar" id="nombre">Nombre: </label>
+			<input type="text" name="nombre" class="camposActualizar" id="nombre" value="<?php echo $datos[0]["Nombre"] ?>" placeholder="Nombre" autocomplete="off".
 			>
-			<input type="hidden" name="nombreAnterior" id="nombreAnterior" value="<?php echo $datos[0]["Nombre"] ?>">
 			<br>
-			<label for="descripcion" class="camposActualizar">Descripción: </label>
+			<label for="descripcion" class="camposActualizar" id="descripcion">Descripción: </label>
 			<br>
 			<textarea name="descripcion" class="camposActualizar" id="descripcion" rows="4" cols="50"><?php echo $datos[0]["Descripcion"];?></textarea>
 			<br>
 			<label for="existencia" class="camposActualizar">En existencia: </label>
-			<input type="number" name="existencia" id="existencia" class="camposActualizar">
+			<input type="number" name="existencia" id="existencia" class="camposActualizar" value="<?php echo $datos[0]['Existencia'] ?>">
+			<br>
+			<label for="imagen" class="imagen">Foto</label>
+			<input type="file" name="imagen" class="imagen">
 			<br>
 			<input type="submit" class="camposActualizar" id="actualizarBtn" value="Actualizar">
 		</form>

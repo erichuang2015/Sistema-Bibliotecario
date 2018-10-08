@@ -31,11 +31,11 @@
 input.camposActualizar, textarea {
 	padding: 10px 20px;
 	font-size: 25px;
-	vertical-align: center;
 }
 
 #descripcion {
 	resize: horizontal;
+	font-family: 'Abel', sans-serif;
 }
 
 label.camposActualizar {
@@ -52,10 +52,21 @@ label.camposActualizar {
 	outline-color: #ffffff;
 }
 
-#descripcion{
-	font-family: 'Abel', sans-serif;
-}
-
 #nombre{
 	font-family: 'Arvo', serif;
+}
+
+.imagen {
+	position: relative;
+	left: 24%;
+	top: 30px;
+	padding: 20px;
+}
+
+input.imagen {
+	border: 1px solid #000;
+}
+
+label.imagen {
+	font-size: 54px;
 }

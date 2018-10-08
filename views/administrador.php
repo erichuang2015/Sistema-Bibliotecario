@@ -27,10 +27,13 @@
 		<a href="add.php"><button class="agregar">Agregar libro</button></a>
 		<?php include '../views/aside.php'; ?>
 		<div class="editarlibros">
+			<?php if (count($datos) == 0): ?>
+				<h2>No hay libros</h2>
+			<?php endif ?>
 			<?php foreach ($datos as $datoLibro): ?>
 			<div class="libro">
 				<div class="img">
-					<img src="imagenes/libro-default.jpg">
+					<img src="imagenes/portadas/<?php echo $datoLibro['Imagen']; ?>">
 				</div>
 				<div id="infolibro">
 					<h2 class="nombrelibro"><?php echo $datoLibro['Nombre'] ?></h2>

@@ -8,10 +8,12 @@
 	$autores = $_POST['autores'];
 	$categoria = $_POST['categoria'];
 
-	$valores = ["2",$nombre,$descripcion,$existencia,$autores,$categoria];
+	$valores = [$nombre,$descripcion,$existencia,$autores,$categoria];
 
-	$columnas = ["Id_Libro","Nombre","Descripcion","Existencia","Id_Autor","Id_Editorial"];
+	$columnas = ["Nombre","Descripcion","Existencia","Id_Autor","Id_Editorial"];
 
 	$conexion->InsertQuery("libros", $valores, $columnas, null);
+
+	header("Location:../views/administrador.php?ba");
 
  ?>

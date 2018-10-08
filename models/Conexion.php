@@ -31,12 +31,13 @@
 				} else {
 
 					//Convirtiendo los array a strings para que el query pueda ejecutarse
-					$keys_imploded = implode($columnas);
+					$keys_imploded = implode(",",$columnas);
 					$values_imploded = implode("','",$valores);
 
-					$query = "INSERT INTO $tabla($keys_imploded) VALUES('$values_imploded')";
+					$query = "INSERT INTO $tabla(Id_Libro,$keys_imploded) VALUES(null,'$values_imploded')";
 				}
 
+				echo $query;
 				$this->execQuery($query, $marcadores);
 			} catch (PDOException $e) {
 				
@@ -143,7 +144,7 @@
 				$filasAfectadas = $cons_prep->rowCount();
 				if ($filasAfectadas == 0) {
 					
-					return "No se ha afectado ninguna fila";
+					return array();
 				} else {
 
 					return $cons_prep->fetchAll();

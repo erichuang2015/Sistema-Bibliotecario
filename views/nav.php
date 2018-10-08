@@ -3,7 +3,7 @@
 <div class="nav container-fluid">
 	<img src="../views/imagenes/books-icon.png">
 	<ul>
-		<li><a href="Inicio1.php">Inicio</a></li>
+		<li><a href="index.php">Inicio</a></li>
 	</ul>
 	<div class="searchbar">
 		<form action="" method="get">
