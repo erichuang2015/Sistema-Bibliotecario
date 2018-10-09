@@ -31,12 +31,12 @@
 	<meta name="theme-color" content="#ffffff">
 
 	<!-- Hojas de estilo -->
-	<link rel="stylesheet" type="text/css" href="css/administrador.css">
 	<link rel="stylesheet" type="text/css" href="../views/css/aside.css">
 	<link rel="stylesheet" type="text/css" href="../views/css/fuentes.css">
 	<link rel="stylesheet" type="text/css" href="../views/css/nav.css">
 	<link rel="stylesheet" type="text/css" href="../views/css/searchbar.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../views/css/administrador.css">
 </head>
 <body>
 	<header>
