@@ -29,3 +29,12 @@ span{
 #down:active .nomCat {
 	display: none;
 }
+
+#aCategorias {
+	color: #000;
+}
+
+#aCategorias:hover {
+	color: blue;
+	text-decoration: none;
+}

@@ -44,7 +44,7 @@
 			 ?>
 			</select>
 			<select class="camposAdd" id="categoria" name="categoria" ">
-				<option>Categoría </option>
+				<option>Categoría principal</option>
 			<?php 
 
 				$categorias = $conexion->SelectQuery(null,"categorias");

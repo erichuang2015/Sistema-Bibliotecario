@@ -15,7 +15,7 @@
 
 		$extension_imagen = explode(".", $_FILES['imagen']['name']);
 		$nombre_separado = explode(" ", $nombre);
-		$nombre_nuevo_imagen = $nombre_separado[0];
+		$nombre_nuevo_imagen = $nombre_separado[count($nombre_separado)-1];
 		$nombre_con_extension = $nombre_nuevo_imagen . "." . $extension_imagen[1];
 
 		unlink($nombre_con_extension);
