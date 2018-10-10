@@ -37,7 +37,7 @@ body {
 }
 
 .editarlibros img {
-	width: 150px;
+	width: 200px;
 }
 
 .editarlibros #infolibro {
@@ -101,6 +101,8 @@ body {
 
 #infolibro {
 	display: block;
+	position: relative;
+	left: 40%;
 }
 
 #existencia {

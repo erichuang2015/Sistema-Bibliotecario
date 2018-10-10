@@ -5,7 +5,7 @@
 	<ul>
 		<li><a href="index.php">Inicio</a></li>
 	</ul>
-	<?php if (isset($_SESSION)){
+	<?php if (isset($_SESSION['nombres'])){
 		echo "<span id='lector'>Lector: " . $_SESSION['nombres'] . " " . $_SESSION['apellidos'] . "</span>";
 	} else {
 		echo "<span id='bienvenido'>Bienvenid@</span>";
@@ -19,7 +19,7 @@
 			<input type="text" name="query" id="query" placeholder="Busca un libro..." autocomplete="off">
 		</form>
 	</div>
-	<?php if (!isset($_SESSION)): ?>
+	<?php if (!isset($_SESSION['nombres'])): ?>
 	<a id="aLogin" href="login.php">
 		<button id="login">Iniciar Sesión</button>
 	</a>

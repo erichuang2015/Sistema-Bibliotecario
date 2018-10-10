@@ -1,7 +1,7 @@
-<?php 
+<?php
 
 	if (isset($_GET['idcategoria'])) {
-		
+
 		include_once("../models/Conexion.php");
 
 		$categoria = $conexion->SelectQuery(null, "categorias", "Id_Categoria", $_GET['idcategoria']);

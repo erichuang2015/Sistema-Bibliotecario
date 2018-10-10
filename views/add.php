@@ -42,7 +42,7 @@
 	</header>
 	<section class="main">
 		<h1 id="titulo">Añadir un libro</h1>
-		<form action="../controllers/addController.php" method="post" enctype="multipart/form-data">
+		<form action="../controllers/addController.php" method="post" enctype="multipart/form-data" id="add">
 			<label class="camposAdd" for="nombre">Nombre: </label>
 			<input class="camposAdd" type="text" id="nombre" name="nombre" required autocomplete="off">
 			<br>
@@ -53,7 +53,7 @@
 			<input class="camposAdd" type="number" value="0" id="existencia" name="existencia" required>
 			<br><br>
 			<select class="camposAdd" id="autores" name="autores">
-				<option>Autores </option>
+				<option value="autores">Autores </option>
 			<?php 
 
 				$autores = $conexion->SelectQuery(null,"autores");
@@ -64,7 +64,7 @@
 			 ?>
 			</select>
 			<select class="camposAdd" id="categoria" name="categoria" ">
-				<option>Categoría principal</option>
+				<option value="categoria">Categoría principal</option>
 			<?php 
 
 				$categorias = $conexion->SelectQuery(null,"categorias");
@@ -82,5 +82,20 @@
 		</form>
 	</section>
 	<footer></footer>
+	<script type="text/javascript">
+		(function(){
+			var formulario = document.getElementById("add");
+
+			formulario.addEventListener("submit",function(e){
+				let imagen = document.getElementById("imagen");
+				let autores = document.getElementById("autores");
+				let categoria = document.getElementById("categoria");
+
+				if (imagen.value == "" || autores.value == "autores" || categoria.value == "categoria") {
+					e.preventDefault();
+				}
+			});
+		}())
+	</script>
 </body>
 </html>

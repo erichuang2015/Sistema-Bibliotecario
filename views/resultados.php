@@ -4,6 +4,7 @@
 
 	if (!isset($_GET['query']) || $_GET['query'] == "") {
 		header("Location:index.php");
+		exit();
 	}
 
 	$libros = $conexion->SelectQuery(null,"libros","Nombre",$_GET['query']);
@@ -53,14 +54,23 @@
 		<section class="libros">
 			<?php foreach ($libros as $libro): ?>
 			<div class="resultados">
-				<img class="resultadosImg" src="imagenes/portadas/Harry.jpg">
+				<img class="resultadosImg" src="<?php echo "imagenes/portadas/".$libro['Imagen']; ?>">
 				<h2 class="resultadosTitulo"><?php echo $libro['Nombre'] ?></h2>
 				<div class="resultadosDescripcion"><?php echo $libro['Descripcion'] ?></div>
+				<br><br>
 				<a class="resultadosVer" href="libro.php?idLibro=<?php echo $libro['Id_Libro'] ?>">Ver libro</a>
 				<a class="resultadosEncargar" href="encargo.php?">Encargar Libro</a>	
 			</div>
+			<br><br>
+			<hr>
+			<br>
 			<?php endforeach ?>
 		</section>
+		<?php if (count($libros) == 0): ?>
+			<section id="noResultados">
+				<span id="text">No hay libros disponibles</span>
+			</section>
+		<?php endif ?>
 	</main>
 	<footer></footer>
 </body>
