@@ -102,7 +102,7 @@
 					$query = "SELECT * FROM $tabla";
 				} else {
 
-					$query = "SELECT * FROM $tabla WHERE $someColumn LIKE '$someValue'";
+					$query = "SELECT * FROM $tabla WHERE $someColumn LIKE '%$someValue%'";
 				}
 			} else {
 
@@ -113,7 +113,7 @@
 				} else {
 					
 					$arrays_imploded = implode(",", $columnsSelect);
-					$query = "SELECT $arrays_imploded FROM $tabla WHERE $someColumn LIKE '$someValue'";
+					$query = "SELECT $arrays_imploded FROM $tabla WHERE $someColumn LIKE '%$someValue%'";
 				}
 			}
 

@@ -1,3 +1,56 @@
+/* Barra de búsqueda */
+a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+.searchbar {
+	display: inline-block;
+	position: relative;
+	left: 45%;
+	margin: 3px 200px;
+}
+
+.searchbar #search {
+	position: absolute;
+	left: 5px;
+	top:3px;
+	height: 46px;
+	border-width: 0px;
+	border-top: 1px inset grey;
+	border-left: 1px inset grey;
+	border-bottom: 1px inset grey;
+	border-radius: 5px 0px 0px 5px;
+	padding: 6px;
+	background-color: #ffffff;
+}
+
+.searchbar #search:focus {
+	outline: none;
+}
+
+.searchbar #search li {
+	margin: 5px;
+}
+
+.searchbar #query {
+	margin-left: 44px;
+	margin-top: 3px;
+	border-top: 1px inset grey;
+	border-bottom: 1px inset grey;
+	border-right: 1px inset grey;
+	border-left: none;
+	border-radius: 0px 5px 5px 0px;
+	padding: 10px;
+	width: 80%;
+
+}
+
+.searchbar #query:focus {
+	outline: none;
+}
+/* fin barra de búsqueda */
+
 .nav{
 	background-color: rgba(171, 25, 69, 0.9);
 	padding-left: 20px ;
@@ -37,4 +90,58 @@ ul {
 ul li a:hover {
 	text-decoration: none;
 	color: #ffffff;
+}
+
+/* Inicio de sesión */
+
+#aLogin {
+	display: inline-block;
+	position: relative;
+	left: 31%;
+	margin: 7px;
+}
+
+#login {
+	font-size: 15px;
+	padding: 10px;
+	background-color: #FF312F;
+	color: #fff;
+	font-weight: bold;
+	
+	border: none;
+	border-radius: 10px;
+}
+
+#login:hover {
+	cursor: pointer;
+}
+
+#login:focus {
+	border: none;
+	outline: none;
+}
+
+#aLogin:hover {
+	text-decoration: none;
+}
+
+/* Lector */
+#lector {
+	display: inline-block;
+	position: absolute;
+	left: 17%;
+	margin: 5px;
+	
+	color: white;
+	font-size: 30px;
+}
+
+#bienvenido {
+	display: inline-block;
+	position: absolute;
+	left: 35%;
+	margin: 5px;
+	
+	color: white;
+	font-size: 30px;
 }

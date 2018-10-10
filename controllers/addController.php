@@ -18,7 +18,7 @@
 
 	move_uploaded_file($_FILES['imagen']['tmp_name'], $carpeta_destino . $nombre_con_extension);
 
-	$columnas = ["Nombre","Descripcion","Existencia","Id_Autor","Id_Editorial", "Imagen"];
+	$columnas = ["Nombre","Descripcion","Existencia","Id_Autor","Id_Categoria", "Imagen"];
 
 	$valores = [$nombre,$descripcion,$existencia,$autores,$categoria,$nombre_con_extension];
 
