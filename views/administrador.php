@@ -1,5 +1,4 @@
 <?php 
-	session_start();
 	require_once("../models/Conexion.php");
 
 	$datos = $conexion->SelectQuery(null, "libros", null, null);

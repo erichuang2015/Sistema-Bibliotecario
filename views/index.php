@@ -53,7 +53,12 @@
 				  <div class="card-body">
 				    <h5 class="card-title"><?php echo $libros[$i]['Nombre_Libro'] ?></h5>
 				    <p class="card-text"><?php echo $libros[$i]['Descripcion'] ?></p>
-				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				    <a href="#" class="btn btn-success">Leer Libro</a>
+				    <a href="#" class="btn btn-warning">Encargar libro</a>
+				<?php if (isset($_SESSION['permisos']) && $_SESSION['permisos'] == "admin"){ ?>
+				    <a href="actualizar.php" class="btn btn-danger" style="margin-top: 5px;">Editar libro</a>
+				    <a href="borrar.php" class="btn btn-dark" style="margin-top: 5px;">Borrar libro</a>
+			    <?php } else {}?>
 				  </div>
 				</div>
 			</div>
