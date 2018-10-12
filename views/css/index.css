@@ -4,14 +4,20 @@
 	box-sizing: border-box;
 }
 
+body {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
 .letra h2{
 	font-family: 'Acme', sans-serif;
 	font-size: 50px;
 }
 
 .letra{
-	margin-left: 300px;
+	margin-left: 450px;
 	margin-top: 40px;
+	font-size: 50px;
 }
 
 /*Comienzo de Cartas*/
@@ -27,4 +33,10 @@
 	width: 150px;
 	height: 80px;
 	padding-left: 40px;
+}
+
+/* libros */
+.books {
+	position: relative;
+	left: 15%;
 }

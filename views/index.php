@@ -1,3 +1,9 @@
+<?php 
+
+	include_once '../models/Conexion.php';
+
+	$libros = $conexion->SelectQuery(null, "libros", null, null);
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,15 +41,25 @@
 	<header>
 	<?php include("../views/nav.php"); ?>
 	</header>
-	<section>
-		<?php include("../views/aside.php"); ?>
-	</section>
-	<div class="letra"><h2>Nombre de categoria</h2></div>
-	</div>
-	
-
-
-
+	<aside><?php include("../views/aside.php"); ?></aside>
+	<main>
+		<h2 class="letra">Todos nuestros libros</h2>
+		<br><br>
+	<?php for ($i=0; $i < count($libros); $i++): ?>
+		<div class="row">
+			<div class="col-sm-4 books">
+				<div class="card" style="width: 18rem;">
+				  <img class="card-img-top" src="imagenes/portadas/<?php echo $libros[$i]['Imagen'] ?>" alt="Card image cap">
+				  <div class="card-body">
+				    <h5 class="card-title"><?php echo $libros[$i]['Nombre_Libro'] ?></h5>
+				    <p class="card-text"><?php echo $libros[$i]['Descripcion'] ?></p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				  </div>
+				</div>
+			</div>
+		</div>
+	<?php endfor ?>
+	</main>
 	<script src="../views/js/jquery.js"></script>
 	<script src="../views/js/bootstrap.min.js"></script>
 </body>

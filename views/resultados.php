@@ -7,7 +7,7 @@
 		exit();
 	}
 
-	$libros = $conexion->SelectQuery(null,"libros","Nombre",$_GET['query']);
+	$libros = $conexion->SelectQuery(null,"libros","Nombre_Libro",$_GET['query']);
 
  ?>
 <!DOCTYPE html>
@@ -52,10 +52,10 @@
 		<h1 id="header">Resultados para: <?php echo $_GET['query']; ?></h1>
 		<br><br>
 		<section class="libros">
-			<?php foreach ($libros as $libro): ?>
+		<?php foreach ($libros as $libro): ?>
 			<div class="resultados">
 				<img class="resultadosImg" src="<?php echo "imagenes/portadas/".$libro['Imagen']; ?>">
-				<h2 class="resultadosTitulo"><?php echo $libro['Nombre'] ?></h2>
+				<h2 class="resultadosTitulo"><?php echo $libro['Nombre_Libro'] ?></h2>
 				<div class="resultadosDescripcion"><?php echo $libro['Descripcion'] ?></div>
 				<br><br>
 				<a class="resultadosVer" href="libro.php?idLibro=<?php echo $libro['Id_Libro'] ?>">Ver libro</a>
@@ -64,13 +64,14 @@
 			<br><br>
 			<hr>
 			<br>
-			<?php endforeach ?>
-		</section>
+		<?php endforeach ?>
 		<?php if (count($libros) == 0): ?>
+			<br><br>
 			<section id="noResultados">
 				<span id="text">No hay libros disponibles</span>
 			</section>
 		<?php endif ?>
+		</section>
 	</main>
 	<footer></footer>
 </body>

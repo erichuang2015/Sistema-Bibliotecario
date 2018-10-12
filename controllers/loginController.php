@@ -29,7 +29,7 @@
 				setcookie("usuario", $_SESSION['nombres'],time()+604800, "/", "localhost");
 			}
 
-			header("Location: ../views/inicio1.php");
+			header("Location: ../views/index.php");
 			exit();
 
 		} catch (PDOException $e) {

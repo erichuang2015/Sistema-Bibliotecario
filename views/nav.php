@@ -1,4 +1,13 @@
+<?php 
+	session_start();
+
+ ?>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<style type="text/css">
+	ul {
+		padding: 0px;
+	}
+</style>
 
 <div class="nav container-fluid">
 	<img src="../views/imagenes/books-icon.png">

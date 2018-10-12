@@ -17,8 +17,10 @@ a{
 	display: inline-block;
 	margin-top: 20px;
 	position: absolute;
-	left: 35%;
+	left: 20%;
 	font-size: 55px;
+	width: 700px;
+	text-align: center;
 }
 
 /* fin nombre del libro */
@@ -31,7 +33,7 @@ a{
 	height: 550px;
 	overflow-x: hidden;
 	overflow-y: scroll;
-	margin: 90px 10px 10px 23%;
+	margin: 150px 10px 10px 23%;
 	padding: 15px;
 }
 

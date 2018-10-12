@@ -43,7 +43,7 @@
 		<?php include '../views/nav.php'; ?>
 	</header>
 	<section class="main">
-		<h1 id="cateLibrostxt">Categoría de libros</h1>
+		<h1 id="cateLibrostxt">Administrador de libros</h1>
 		<a href="add.php"><button class="agregar">Agregar libro</button></a>
 		<?php include '../views/aside.php'; ?>
 		<div class="editarlibros">
@@ -56,7 +56,7 @@
 					<img src="imagenes/portadas/<?php echo $datoLibro['Imagen']; ?>">
 				</div>
 				<div id="infolibro">
-					<h2 class="nombrelibro"><?php echo $datoLibro['Nombre'] ?></h2>
+					<h2 class="nombrelibro"><?php echo $datoLibro['Nombre_Libro'] ?></h2>
 					<p class="descripcion"><?php echo $datoLibro['Descripcion'] ?></p>
 					<span id="existencia">En existencia: <?php echo $datoLibro['Existencia'] ?></span>
 				</div>

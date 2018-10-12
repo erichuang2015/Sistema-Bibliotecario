@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-10-2018 a las 01:26:36
+-- Tiempo de generación: 13-10-2018 a las 00:33:32
 -- Versión del servidor: 10.1.31-MariaDB
 -- Versión de PHP: 7.2.3
 
@@ -62,37 +62,26 @@ INSERT INTO `categorias` (`Id_Categoria`, `Nombre`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `editoriales`
---
-
-CREATE TABLE `editoriales` (
-  `Id_Editorial` int(3) NOT NULL,
-  `Nombre` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `editoriales`
---
-
-INSERT INTO `editoriales` (`Id_Editorial`, `Nombre`) VALUES
-(1, 'Diego Saravia');
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `libros`
 --
 
 CREATE TABLE `libros` (
   `Id_Libro` int(3) NOT NULL,
-  `Nombre` varchar(255) NOT NULL,
+  `Nombre_Libro` varchar(255) NOT NULL,
   `Descripcion` varchar(10000) NOT NULL,
   `Existencia` int(2) NOT NULL,
   `Puntuacion` int(3) NOT NULL,
   `Id_Autor` int(3) NOT NULL DEFAULT '0',
-  `Id_Editorial` int(3) NOT NULL DEFAULT '0',
+  `Id_Categoria` int(3) NOT NULL,
   `Imagen` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `libros`
+--
+
+INSERT INTO `libros` (`Id_Libro`, `Nombre_Libro`, `Descripcion`, `Existencia`, `Puntuacion`, `Id_Autor`, `Id_Categoria`, `Imagen`) VALUES
+(2, 'Harry Potter Y La Orden Del Fénix', 'Esta es una descripción de ejemplo para Harry Potter y la orden del fénix y tiene que ser algo medianamente largo para que el navegador tenga problemas a la hora de ordenarlo todo.', 10, 0, 1, 1, 'Fénix.jpg');
 
 -- --------------------------------------------------------
 
@@ -156,18 +145,12 @@ ALTER TABLE `categorias`
   ADD PRIMARY KEY (`Id_Categoria`);
 
 --
--- Indices de la tabla `editoriales`
---
-ALTER TABLE `editoriales`
-  ADD PRIMARY KEY (`Id_Editorial`);
-
---
 -- Indices de la tabla `libros`
 --
 ALTER TABLE `libros`
   ADD PRIMARY KEY (`Id_Libro`),
   ADD KEY `Id_Autor` (`Id_Autor`),
-  ADD KEY `Id_Editorial` (`Id_Editorial`);
+  ADD KEY `Id_Categoria` (`Id_Categoria`);
 
 --
 -- Indices de la tabla `sexos`
@@ -193,16 +176,10 @@ ALTER TABLE `autores`
   MODIFY `Id_Autor` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `editoriales`
---
-ALTER TABLE `editoriales`
-  MODIFY `Id_Editorial` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT de la tabla `libros`
 --
 ALTER TABLE `libros`
-  MODIFY `Id_Libro` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id_Libro` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
@@ -219,7 +196,7 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `libros`
   ADD CONSTRAINT `libros_ibfk_1` FOREIGN KEY (`Id_Autor`) REFERENCES `autores` (`Id_Autor`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `libros_ibfk_2` FOREIGN KEY (`Id_Editorial`) REFERENCES `editoriales` (`Id_Editorial`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `libros_ibfk_2` FOREIGN KEY (`Id_Categoria`) REFERENCES `categorias` (`Id_Categoria`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `usuarios`
