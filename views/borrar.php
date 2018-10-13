@@ -26,7 +26,7 @@
 		<h1 id="h1">¿Desea eliminar este libro?</h1>
 		<br><br>
 		<div id="libro">
-			<h2 id="h2"><?php echo $datos[0]['Nombre'] ?></h2>
+			<h2 id="h2"><?php echo $datos[0]['Nombre_Libro']?></h2>
 			<img id="img" src="imagenes/portadas/<?php echo $datos[0]['Imagen'] ?>">
 			<a id="button" href="../controllers/borrarlibroController.php?id=<?php echo $_GET['id']?>"><button>Eliminar</button></a>
 		</div>
