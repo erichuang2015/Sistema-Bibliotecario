@@ -14,8 +14,9 @@ body {
 	position: relative;
 	left: 25%;
 	margin: 10px;
-	font-size: 75px;
+	font-size: 65px;
 	width: 600px;
+	font-family: 'Kodchasan', sans-serif;
 }
 
 .libros {
@@ -23,6 +24,7 @@ body {
 	position: relative;
 	left: 20%;
 	width: 900px;
+	font-family: 'Arvo', serif;
 }
 
 .resultadosImg {
@@ -33,7 +35,7 @@ body {
 .resultadosTitulo {
 	position: relative;
 	top: 75px;left: 20px;
-	font-size: 50px;
+	font-size: 45px;
 }
 
 .resultadosDescripcion {
@@ -52,7 +54,7 @@ body {
 	font-weight: bold;
 }
 
-.resultadosVer:hover, .resultadosEncargar:hover {
+.resultadosVer:hover{
 	color: #000;
 	text-decoration: none;
 }
@@ -64,6 +66,12 @@ body {
 
 .resultadosEncargar {
 	background-color: #05E800;
+
+}
+
+.resultadosEncargar:hover{
+	color: #fff;
+	text-decoration: none;
 }
 
 #noResultados {

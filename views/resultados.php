@@ -49,7 +49,7 @@
 	</header>
 	<aside><?php include 'aside.php'; ?></aside>
 	<main>
-		<h1 id="header">Resultados para: <?php echo $_GET['query']; ?></h1>
+		<h1 id="header">Resultados para: "<?php echo $_GET['query']; ?>"</h1>
 		<br><br>
 		<section class="libros">
 		<?php foreach ($libros as $libro): ?>
