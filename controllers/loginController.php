@@ -29,8 +29,13 @@
 				setcookie("usuario", $_SESSION['nombres'],time()+604800, "/", "localhost");
 			}
 
-			header("Location: ../views/index.php");
-			exit();
+			if ($datos[0]['Permisos'] == "admin") {
+				header("Location:../views/administrador.php");
+				exit();
+			} else {
+				header("Location: ../views/index.php");
+				exit();
+			}
 
 		} catch (PDOException $e) {
 			

@@ -7,7 +7,7 @@
 
 	include_once("../models/Conexion.php");
 
-	$sql = "SELECT * FROM libros INNER JOIN categorias ON libros.Id_Categoria = categorias.Id_Categoria WHERE libros.Id_Categoria = " . $_GET['idcategoria'] . "";
+	$sql = "SELECT * FROM libros INNER JOIN categorias ON libros.Id_Categoria = categorias.Id_Categoria WHERE libros.Id_Categoria = " . $_GET['idcategoria'];
 	$datos = $conexion->execQuery($sql,null);
  ?>
 <!DOCTYPE html>

@@ -2,6 +2,13 @@
 
 	require_once("../models/Conexion.php");
 
+	if (isset($_SESSION['permisos']) && $_SESSION['permisos'] == "admin") {
+		if (!isset($_GET['id'])) {
+			header("Location:administrador.php");
+			exit();
+		}
+	}
+
 	$datos = $conexion->SelectQuery(null, "libros", "Id_Libro", $_GET['id']);
 
  ?>

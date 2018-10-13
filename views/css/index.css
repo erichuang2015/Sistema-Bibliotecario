@@ -37,6 +37,5 @@ body {
 
 /* libros */
 .books {
-	position: relative;
-	left: 15%;
+	left: 20%;
 }

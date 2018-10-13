@@ -32,6 +32,10 @@
 	<a id="aLogin" href="login.php">
 		<button id="login">Iniciar Sesión</button>
 	</a>
+	<?php else: ?>
+	<a id="aLogin" href="logout.php">
+		<button id="login">Cerrar Sesión</button>
+	</a>
 	<?php endif ?>
 </div>
 <script type="text/javascript">

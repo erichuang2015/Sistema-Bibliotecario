@@ -18,7 +18,7 @@
 	}
 	$edad = intval(date("Y")) - $anioCumple;
 	$sexo = htmlentities(addslashes($_POST["genero"]));
-	$permisos = "Usuario";
+	$permisos = "usuario";
 
 	//Cifrando ontraseña
 	$p_cifrada = password_hash($contra, PASSWORD_DEFAULT, array("cost"=>12));

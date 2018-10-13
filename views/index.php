@@ -55,10 +55,10 @@
 				    <p class="card-text"><?php echo $libros[$i]['Descripcion'] ?></p>
 				    <a href="#" class="btn btn-success">Leer Libro</a>
 				    <a href="#" class="btn btn-warning">Encargar libro</a>
-				<?php if (isset($_SESSION['permisos']) && $_SESSION['permisos'] == "admin"){ ?>
+				<?php if (isset($_SESSION['permisos']) && $_SESSION['permisos'] == "admin"): ?>
 				    <a href="actualizar.php" class="btn btn-danger" style="margin-top: 5px;">Editar libro</a>
-				    <a href="borrar.php" class="btn btn-dark" style="margin-top: 5px;">Borrar libro</a>
-			    <?php } else {}?>
+				    <a href="borrar.php?id=<?php echo $$libros[$i]['Id_Libro'] ?>" class="btn btn-dark" style="margin-top: 5px;">Borrar libro</a>
+			    <?php endif ?>
 				  </div>
 				</div>
 			</div>

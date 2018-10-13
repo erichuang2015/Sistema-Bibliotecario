@@ -1,13 +1,14 @@
 <?php 
 	
-	//session_start();
 	require_once("../models/Conexion.php");
-	// Validando entrada solo a los usuarios autorizados
-	//if ("administrador" != "administrador" || !isset($_GET['id'])) {
-		
-	//	header("Location: Inicio1.php");
-	//}
 
+	if (isset($_SESSION['permisos']) && $_SESSION['permisos'] == "admin") {
+		if (!isset($_GET['id'])) {
+			header("Location:administrador.php");
+			exit();
+		}
+	}
+	
 	$datos = $conexion->SelectQuery(null, "libros", "Id_Libro", $_GET['id']);
  ?>
 <!DOCTYPE html>
@@ -34,7 +35,7 @@
 		<form action="../controllers/actualizarController.php" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="id" value="<?php echo $_GET['id'] ?>">
 			<label for="nombre" class="camposActualizar" id="nombre">Nombre: </label>
-			<input type="text" name="nombre" class="camposActualizar" id="nombre" value="<?php echo $datos[0]["Nombre"] ?>" placeholder="Nombre" autocomplete="off".
+			<input type="text" name="nombre" class="camposActualizar" id="nombre" value="<?php echo $datos[0]["Nombre_Libro"] ?>" placeholder="Nombre" autocomplete="off".
 			>
 			<br>
 			<label for="descripcion" class="camposActualizar" id="descripcion">Descripción: </label>
