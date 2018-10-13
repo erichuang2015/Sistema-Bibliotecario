@@ -7,7 +7,7 @@ a:hover {
 .searchbar {
 	display: inline-block;
 	position: relative;
-	left: 55%;
+	left: 45%;
 	margin: 3px 200px;
 }
 
@@ -131,7 +131,7 @@ ul li a:hover {
 	position: absolute;
 	left: 17%;
 	margin: 5px;
-	
+	font-family: 'Vast Shadow', cursive;	
 	color: white;
 	font-size: 30px;
 }
@@ -141,7 +141,7 @@ ul li a:hover {
 	position: absolute;
 	left: 35%;
 	margin: 5px;
-	
+	font-family: 'Vast Shadow', cursive;
 	color: white;
 	font-size: 30px;
 }

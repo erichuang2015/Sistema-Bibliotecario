@@ -7,11 +7,10 @@
 #h1 {
 	width: 800px;
 	position: relative;
-	right: 0px; left: 0px;
+	right: 0px; left: 0px; top:70px;
 	margin: auto;
-	font-size: 60px;
+	font-size: 55px;
 	color: #B91313;
-	text-shadow: 
 	font-family: 'Fahkwang', sans-serif;
 }
 
@@ -19,10 +18,11 @@
 	width: 600px;
 	margin: auto;
 	font-size: 55px;
+	font-family: 'Arvo', serif;
 }
 
 #img {
-	margin-top: 40px;
+	margin-top: 20px;
 	width: 200px;
 	position: absolute;
 	left: 27%;
@@ -30,8 +30,8 @@
 
 #button {
 	position: absolute;
-	left: 57%;
-	top: 50vh;
+	left: 55%;
+	top: 70vh;
 }
 
 #button:hover button {
